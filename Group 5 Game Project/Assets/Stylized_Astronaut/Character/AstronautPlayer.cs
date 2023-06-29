@@ -22,10 +22,22 @@ namespace AstronautPlayer
 		void Update (){
 			if (Input.GetKey ("w")) {
 				anim.SetInteger ("AnimationPar", 1);
-			}  else {
+			}
+			else if (Input.GetKey ("d")) {
+				anim.SetInteger ("AnimationPar", 1);
+			}
+			else if (Input.GetKey ("s")) {
+				anim.SetInteger ("AnimationPar", 1);
+			}  
+			else if (Input.GetKey ("a")) {
+				anim.SetInteger ("AnimationPar", 1);
+			}  
+			else {
 				anim.SetInteger ("AnimationPar", 0);
 			}
+			
 
+			/*
 			if(controller.isGrounded){
 				moveDirection = transform.forward * Input.GetAxis("Vertical") * speed;
 			}
@@ -34,6 +46,8 @@ namespace AstronautPlayer
 			transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
 			controller.Move(moveDirection * Time.deltaTime);
 			moveDirection.y -= gravity * Time.deltaTime;
+			*/
+
 		}
 	}
 }
