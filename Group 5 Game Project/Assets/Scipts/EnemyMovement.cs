@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBehavior : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     public enum EnemyState
     {
@@ -10,9 +10,6 @@ public class EnemyBehavior : MonoBehaviour
         Chase,  // Chase player once spotted
         Evade   // Run away when health is low (may or may not implement, we'll see)
     }
-
-    // Stats
-    public int health = 3;
 
     // Behavior
     public EnemyState state;
@@ -30,6 +27,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         state = EnemyState.Wander;
         target = null;
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
 
     // Update is called once per frame
@@ -38,23 +36,23 @@ public class EnemyBehavior : MonoBehaviour
         if (state == EnemyState.Wander)
         {
             timer += Time.deltaTime;
-    
-            if (timer >= wanderTimer) {
-                Vector3 newPos = RandomWander(transform.position, wanderRadius, -1);
-                agent.SetDestination(newPos);
-                timer = 0;
+
+            if (timer >= wanderTimer)
+            {
+                Wander();
             }
         }
         else if (state == EnemyState.Chase)
         {
-
+            Chase();
         }
     }
 
     // Physics (like raycast) must happen here
     void FixedUpdate()
     {
-        Ray ray = new Ray(transform.position, Vector3.forward); // TODO: Vector3.forward is not relative to enemy's rotation. This will have to be found another way.
+        Vector3 relativeForward = transform.TransformDirection(Vector3.forward);
+        Ray ray = new Ray(transform.position, relativeForward);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, visionRange))
@@ -72,6 +70,29 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
+    void Wander()
+    {
+        // Debug.Log("Moving to new destination.");
+        Vector3 newPos = RandomWander(transform.position, wanderRadius, -1);
+        agent.SetDestination(newPos);
+        timer = 0;
+    }
+
+    void Chase()
+    {
+        if (TargetTooFar(5.0f))
+        {
+            // Player ran away far enough, go back to wandering
+            state = EnemyState.Wander;
+        }
+        else
+        {
+            // Chase player
+            agent.SetDestination(target.position);
+        }
+    }
+
+    // Determines a random point on the NavMesh to travel to.
     public static Vector3 RandomWander(Vector3 origin, float dist, int layermask)
     {
         Vector3 randDirection = Random.insideUnitSphere * dist;
@@ -83,5 +104,15 @@ public class EnemyBehavior : MonoBehaviour
         UnityEngine.AI.NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
  
         return navHit.position;
+    }
+
+    // Returns true if player gets 'dist' units away in X and Z directions
+    bool TargetTooFar(float dist)
+    {
+        if (target.position.x - transform.position.x > dist && target.position.z - transform.position.z > dist)
+        {
+            return true;
+        }
+        return false;
     }
 }
