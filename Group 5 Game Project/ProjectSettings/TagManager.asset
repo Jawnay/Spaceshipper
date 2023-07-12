@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Pickaxe_pedastal
   - Pickaxe_player
+  - sword
+  - dash
+  - dialogue
+  - dialogue1
+  - dialogue2
   layers:
   - Default
   - TransparentFX

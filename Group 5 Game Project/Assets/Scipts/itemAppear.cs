@@ -5,25 +5,34 @@ using UnityEngine;
 public class itemAppear : MonoBehaviour
 {
     public GameObject pickaxePlayer;
+    public GameObject swordPlayer;
+    public GameObject playerDash;
+    public bool pickaxe = false;
+    public bool sword = false;
     // Update is called once per frame
     void Start()
     {
         pickaxePlayer = GameObject.FindWithTag("Pickaxe_player");
-        // if (pickaxePlayer != null) {
-        //     pickaxePlayer.SetActive(false);
-        // } else {
-        //         Debug.LogError("not found");
-        //     }
-    }
-
-    public void OnCollisionEnter(Collision other) {
-        if (other.gameObject.CompareTag("Pickaxe_pedastal")) {
-            print("here!");
-            //if (pickaxePlayer != null) {
-                pickaxePlayer.SetActive(false);
-
-           // }
+        swordPlayer = GameObject.FindWithTag("sword");
+        if (pickaxePlayer != null) {
+            pickaxePlayer.SetActive(pickaxe);
+            swordPlayer.SetActive(sword);
         }
-
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            pickaxe = true;
+            sword = false;
+            pickaxePlayer.SetActive(pickaxe);
+            swordPlayer.SetActive(sword);
+        } if (Input.GetKeyDown(KeyCode.Alpha2)) {
+            pickaxe = false;
+            sword = true;
+            pickaxePlayer.SetActive(pickaxe);
+            swordPlayer.SetActive(sword);
+        }
+    }
+
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class item : MonoBehaviour
+public class It : MonoBehaviour
 {
     public GameObject pickaxePlayer;
     // Update is called once per frame
@@ -19,10 +19,10 @@ public class item : MonoBehaviour
     public void OnCollisionEnter(Collision other) {
         if (other.gameObject.CompareTag("Pickaxe_pedastal")) {
             print("here!");
-            if (pickaxePlayer != null) {
+            //if (pickaxePlayer != null) {
                 pickaxePlayer.SetActive(false);
 
-            }
+           // }
         }
 
     }
