@@ -11,13 +11,16 @@ public class EnemyMovement : MonoBehaviour
         Evade   // Run away when health is low (may or may not implement, we'll see)
     }
 
-    // Behavior
+    // Movement
     public EnemyState state;
     public Transform target;
     private UnityEngine.AI.NavMeshAgent agent;
     private float timer;
     public float wanderRadius;
     public float wanderTimer;
+
+    // Attacking
+    public float meleeRange = 5.0f;
 
     // Animation
     public float speed = 0;
@@ -52,15 +55,6 @@ public class EnemyMovement : MonoBehaviour
         {
             Chase();
         }
-
-        if (speed > 0)
-        {
-            anim.SetBool("isMoving", true);
-        }
-        else
-        {
-            anim.SetBool("isMoving", false);
-        }
     }
 
     // Physics (like raycast) must happen here
@@ -88,6 +82,25 @@ public class EnemyMovement : MonoBehaviour
         // Speed check
         speed = (transform.position - lastPosition).magnitude;
         lastPosition = transform.position;
+        
+        if (speed > 0)
+        {
+            anim.SetBool("isMoving", true);
+        }
+        else
+        {
+            anim.SetBool("isMoving", false);
+        }
+
+        if (TargetInMeleeRange())
+        {
+            // TODO: Attack. In separate class?
+            anim.SetBool("inMeleeRange", true);
+        }
+        else
+        {    
+            anim.SetBool("inMeleeRange", false);
+        }
     }
 
     void Wander()
@@ -130,6 +143,16 @@ public class EnemyMovement : MonoBehaviour
     bool TargetTooFar(float dist)
     {
         if (target.position.x - transform.position.x > dist && target.position.z - transform.position.z > dist)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    // Returns true if the target is being chased and is within melee range.
+    bool TargetInMeleeRange()
+    {
+        if (target.position.x - transform.position.x < meleeRange && target.position.z - transform.position.z < meleeRange)
         {
             return true;
         }
