@@ -19,6 +19,11 @@ public class EnemyMovement : MonoBehaviour
     public float wanderRadius;
     public float wanderTimer;
 
+    // Animation
+    public float speed = 0;
+    Vector3 lastPosition = Vector3.zero;
+    public Animator anim;
+
     // Vision
     private int visionRange = 10;   // Max range for raycast
 
@@ -28,6 +33,7 @@ public class EnemyMovement : MonoBehaviour
         state = EnemyState.Wander;
         target = null;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -46,11 +52,21 @@ public class EnemyMovement : MonoBehaviour
         {
             Chase();
         }
+
+        if (speed > 0)
+        {
+            anim.SetBool("isMoving", true);
+        }
+        else
+        {
+            anim.SetBool("isMoving", false);
+        }
     }
 
     // Physics (like raycast) must happen here
     void FixedUpdate()
     {
+        // Raycast
         Vector3 relativeForward = transform.TransformDirection(Vector3.forward);
         Ray ray = new Ray(transform.position, relativeForward);
         RaycastHit hit;
@@ -68,6 +84,10 @@ public class EnemyMovement : MonoBehaviour
                 state = EnemyState.Chase;
             }
         }
+
+        // Speed check
+        speed = (transform.position - lastPosition).magnitude;
+        lastPosition = transform.position;
     }
 
     void Wander()
