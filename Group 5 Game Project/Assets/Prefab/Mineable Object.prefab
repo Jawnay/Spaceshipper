@@ -110,5 +110,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6135b68a3168a234eb123fed11e0218d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsHealth: 0
+  objectsHealth: 100
   playerResources: {fileID: 0}

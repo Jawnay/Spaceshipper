@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a565d9c1ff7b3468bf95b0e636b900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  range: 0
+  damage: 10
+  range: 50
   mineableObject:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   objectsHealth: {fileID: 0}
