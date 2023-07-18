@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour
     public float wanderTimer;
 
     // Attacking
-    public float meleeRange = 5.0f;
+    public float meleeRange = 3.0f;
 
     // Animation
     public float speed = 0;
@@ -35,8 +35,11 @@ public class EnemyMovement : MonoBehaviour
     {
         state = EnemyState.Wander;
         target = null;
-        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         anim = GetComponentInChildren<Animator>();
+
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        agent.enabled = false;
+        Invoke("EnableAgent", 1f);
     }
 
     // Update is called once per frame
@@ -73,7 +76,7 @@ public class EnemyMovement : MonoBehaviour
             if (spotted.tag == "Player")
             {
                 // Set target to the player and begin chasing
-                Debug.Log("Player spotted by enemy.");
+                // Debug.Log("Player spotted by enemy.");
                 target = spotted.transform;
                 state = EnemyState.Chase;
             }
@@ -101,6 +104,11 @@ public class EnemyMovement : MonoBehaviour
         {    
             anim.SetBool("inMeleeRange", false);
         }
+    }
+
+    void EnableAgent()
+    {
+        agent.enabled = true;
     }
 
     void Wander()
@@ -152,9 +160,11 @@ public class EnemyMovement : MonoBehaviour
     // Returns true if the target is being chased and is within melee range.
     bool TargetInMeleeRange()
     {
-        if (target.position.x - transform.position.x < meleeRange && target.position.z - transform.position.z < meleeRange)
-        {
-            return true;
+        if (target != null){
+            if (target.position.x - transform.position.x < meleeRange && target.position.z - transform.position.z < meleeRange)
+            {
+                return true;
+            }
         }
         return false;
     }
