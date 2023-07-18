@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Pickaxe_pedastal
+  - Pickaxe_player
+  - sword
+  - dash
+  - dialogue
+  - dialogue1
+  - dialogue2
   layers:
   - Default
   - TransparentFX
