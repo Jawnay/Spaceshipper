@@ -17,9 +17,14 @@ public class MainMenu : MonoBehaviour
         
     }
 
-    public void OnPlayButton()
+    public void OnPlayTutButton()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void OnPlayButton()
+    {
+        SceneManager.LoadScene(2);
     }
 
     public void OnQuitButton()
