@@ -15,8 +15,7 @@ public class player_health : MonoBehaviour
     // then in start
     // script_var = var_you_want.getComponent<ScriptName>();
     // Update is called once per frame
-    void Update()
-    {
+    void Start() {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         healthfull = GameObject.FindGameObjectWithTag("health_full");
         health5 = GameObject.FindGameObjectWithTag("health_5");
@@ -29,6 +28,10 @@ public class player_health : MonoBehaviour
         health3.SetActive(false);
         health2.SetActive(false);
         health1.SetActive(false);
+    }
+    
+    void Update()
+    {
         PlayerHealth(health);
     }
 
