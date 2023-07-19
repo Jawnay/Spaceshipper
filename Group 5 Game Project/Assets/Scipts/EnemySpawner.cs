@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // SpawnBlueEnemies(1);
+        SpawnBlueEnemies(2);
     }
 
     // Update is called once per frame
@@ -30,9 +30,19 @@ public class EnemySpawner : MonoBehaviour
         for (int i = 0; i < howMany; i++)
         {
             Debug.Log("Instantiate: Spawning enemy.");
-            GameObject newEnemy = Instantiate(blueEnemy, spawnPoints[i]);
+
+            UnityEngine.AI.NavMeshHit spawn = GenerateSpawnFromPoint(spawnPoints[i]);
+
+            GameObject newEnemy = Instantiate(blueEnemy, spawn.position, spawnPoints[i].rotation);
             // UnityEngine.AI.NavMeshAgent newAgent = newEnemy.GetComponent<UnityEngine.AI.NavMeshAgent>();
             // newAgent.enabled = false;
         }
+    }
+
+    public UnityEngine.AI.NavMeshHit GenerateSpawnFromPoint(Transform point)
+    {
+        UnityEngine.AI.NavMeshHit hit;
+        UnityEngine.AI.NavMesh.SamplePosition(point.position, out hit, 10.0f, UnityEngine.AI.NavMesh.AllAreas);
+        return hit;
     }
 }

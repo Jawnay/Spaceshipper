@@ -20,7 +20,8 @@ public class EnemyMovement : MonoBehaviour
     public float wanderTimer;
 
     // Attacking
-    public float meleeRange = 3.0f;
+    public float meleeRange;
+    public GameObject attack; // Object with trigger hitbox
 
     // Animation
     public float speed = 0;
@@ -36,10 +37,7 @@ public class EnemyMovement : MonoBehaviour
         state = EnemyState.Wander;
         target = null;
         anim = GetComponentInChildren<Animator>();
-
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        agent.enabled = false;
-        Invoke("EnableAgent", 1f);
     }
 
     // Update is called once per frame
@@ -97,18 +95,14 @@ public class EnemyMovement : MonoBehaviour
 
         if (TargetInMeleeRange())
         {
-            // TODO: Attack. In separate class?
             anim.SetBool("inMeleeRange", true);
+            // Invoke("Attack", 0.3f);
+            // Invoke("DisableAttack", 0.8f);
         }
         else
         {    
             anim.SetBool("inMeleeRange", false);
         }
-    }
-
-    void EnableAgent()
-    {
-        agent.enabled = true;
     }
 
     void Wander()
@@ -129,7 +123,16 @@ public class EnemyMovement : MonoBehaviour
         else
         {
             // Chase player
-            agent.SetDestination(target.position);
+            // if (TargetInMeleeRange())
+            // {
+            //     // Stand still to attack
+            //     agent.SetDestination(target.position);
+            //     agent.SetDestination(gameObject.transform.position);
+            // }
+            // else
+            // {
+                agent.SetDestination(target.position);
+            // }
         }
     }
 
