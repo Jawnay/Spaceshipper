@@ -11,6 +11,10 @@ TagManager:
   - dialogue
   - dialogue1
   - dialogue2
+  - dialgoue3
+  - dialogue4
+  - dialogue5
+  - dialouge6
   layers:
   - Default
   - TransparentFX
