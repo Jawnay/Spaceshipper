@@ -10,13 +10,9 @@ public class player_health : MonoBehaviour
     public GameObject health3;
     public GameObject health2;
     public GameObject health1;
-    // example for how to get object from diff script
-    // public scriptName script_var
-    // then in start
-    // script_var = var_you_want.getComponent<ScriptName>();
+    public int health = 90;
     // Update is called once per frame
     void Start() {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
         healthfull = GameObject.FindGameObjectWithTag("health_full");
         health5 = GameObject.FindGameObjectWithTag("health_5");
         health4 = GameObject.FindGameObjectWithTag("health_4");
@@ -39,6 +35,7 @@ public class player_health : MonoBehaviour
         switch (health)
         {
             case 75:
+                healthfull.SetActive(false);
                 health5.SetActive(true);
                 break;
             case 60:
