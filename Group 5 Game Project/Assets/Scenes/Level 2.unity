@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6804,25 +6804,6 @@ MonoBehaviour:
   playerDash: {fileID: 0}
   pickaxe: 0
   sword: 0
---- !u!114 &1947861167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 542483640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb6f838c6d7d6064686276cb1131b2b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthfull: {fileID: 0}
-  health5: {fileID: 0}
-  health4: {fileID: 0}
-  health3: {fileID: 0}
-  health2: {fileID: 0}
-  health1: {fileID: 0}
-  health: 90
 --- !u!1 &2042215269
 GameObject:
   m_ObjectHideFlags: 0
