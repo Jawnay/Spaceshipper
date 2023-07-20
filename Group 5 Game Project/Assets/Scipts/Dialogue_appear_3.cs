@@ -5,7 +5,7 @@ using UnityEngine;
 public class Dialogue_appear_3 : MonoBehaviour
 {
      public GameObject dialogueBox3;
-    public float proximity = 5f;
+    public float proximity = 7f;
     private Transform player;
     // Start is called before the first frame update
     void Start()

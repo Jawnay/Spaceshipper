@@ -2609,7 +2609,7 @@ GameObject:
   - component: {fileID: 460460970}
   - component: {fileID: 460460969}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2627,7 +2627,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 59ea27cd8f9ccc3439c3137810da299e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.741
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5718,7 +5718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox6: {fileID: 735037200}
-  proximity: 2
+  proximity: 7
 --- !u!1001 &1090797530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10126,7 +10126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox2: {fileID: 1180835051}
-  proximity: 5
+  proximity: 7
 --- !u!1 &1691806178
 GameObject:
   m_ObjectHideFlags: 0
@@ -10481,7 +10481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox4: {fileID: 1054076493}
-  proximity: 5
+  proximity: 7
 --- !u!1 &1780458455
 GameObject:
   m_ObjectHideFlags: 0
@@ -11852,7 +11852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox3: {fileID: 1823166287}
-  proximity: 5
+  proximity: 7
 --- !u!1 &2025192220
 GameObject:
   m_ObjectHideFlags: 0
