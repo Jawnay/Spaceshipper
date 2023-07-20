@@ -20,8 +20,7 @@ public class EnemyMovement : MonoBehaviour
     public float wanderTimer;
 
     // Attacking
-    public float meleeRange;
-    public GameObject attack; // Object with trigger hitbox
+    public float meleeRange = 5.0f;
 
     // Animation
     public float speed = 0;
@@ -36,8 +35,8 @@ public class EnemyMovement : MonoBehaviour
     {
         state = EnemyState.Wander;
         target = null;
-        anim = GetComponentInChildren<Animator>();
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -74,7 +73,7 @@ public class EnemyMovement : MonoBehaviour
             if (spotted.tag == "Player")
             {
                 // Set target to the player and begin chasing
-                // Debug.Log("Player spotted by enemy.");
+                Debug.Log("Player spotted by enemy.");
                 target = spotted.transform;
                 state = EnemyState.Chase;
             }
@@ -95,9 +94,8 @@ public class EnemyMovement : MonoBehaviour
 
         if (TargetInMeleeRange())
         {
+            // TODO: Attack. In separate class?
             anim.SetBool("inMeleeRange", true);
-            // Invoke("Attack", 0.3f);
-            // Invoke("DisableAttack", 0.8f);
         }
         else
         {    
@@ -123,16 +121,7 @@ public class EnemyMovement : MonoBehaviour
         else
         {
             // Chase player
-            // if (TargetInMeleeRange())
-            // {
-            //     // Stand still to attack
-            //     agent.SetDestination(target.position);
-            //     agent.SetDestination(gameObject.transform.position);
-            // }
-            // else
-            // {
-                agent.SetDestination(target.position);
-            // }
+            agent.SetDestination(target.position);
         }
     }
 
@@ -163,11 +152,9 @@ public class EnemyMovement : MonoBehaviour
     // Returns true if the target is being chased and is within melee range.
     bool TargetInMeleeRange()
     {
-        if (target != null){
-            if (target.position.x - transform.position.x < meleeRange && target.position.z - transform.position.z < meleeRange)
-            {
-                return true;
-            }
+        if (target.position.x - transform.position.x < meleeRange && target.position.z - transform.position.z < meleeRange)
+        {
+            return true;
         }
         return false;
     }
