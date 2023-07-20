@@ -8,21 +8,44 @@ public class MiningManager : MonoBehaviour
     [SerializeField] private float range;
     [SerializeField] private LayerMask mineableObject;
     [SerializeField] private ObjectsHealth objectsHealth;
+    private Transform playerTransform;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        // Find the player character using the "Player" tag
+        GameObject playerCharacter = GameObject.FindGameObjectWithTag("Player");
+
+        // Check if the player character was found
+        if (playerCharacter != null)
+        {
+            playerTransform = playerCharacter.transform;
+        }
+        else
+        {
+            Debug.LogError("Player not found! Make sure to tag your player character with 'Player'.");
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)){
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        // If playerTransform is still not assigned, exit the Update function
+        if (playerTransform == null)
+        {
+            return;
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            // Calculate the mining direction based on the player's facing direction
+            Vector3 miningDirection = playerTransform.forward;
+
+            // Create a ray starting from the player's position in the mining direction
+            Ray ray = new Ray(playerTransform.position, miningDirection);
+
             RaycastHit hit;
-            if(Physics.Raycast(ray, out hit, range, mineableObject)){
-                objectsHealth = hit.transform.GetComponent<ObjectsHealth>(); 
+            if (Physics.Raycast(ray, out hit, range, mineableObject))
+            {
+                objectsHealth = hit.transform.GetComponent<ObjectsHealth>();
                 objectsHealth.objectsHealth -= damage;
             }
         }

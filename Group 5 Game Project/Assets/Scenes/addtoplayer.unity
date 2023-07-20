@@ -334,6 +334,18 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7337699057734451072, guid: 3b59a5bd66e74c942b33350475a0afd5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.8309
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337699057734451072, guid: 3b59a5bd66e74c942b33350475a0afd5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.8309
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337699057734451072, guid: 3b59a5bd66e74c942b33350475a0afd5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.8309
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337699057734451072, guid: 3b59a5bd66e74c942b33350475a0afd5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -807,6 +819,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5819559863180628304, guid: c306bf03de1c0074faff47ccbd274e44, type: 3}
+      propertyPath: range
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5819559863180628305, guid: c306bf03de1c0074faff47ccbd274e44, type: 3}
       propertyPath: m_Name
       value: Mining Manager
@@ -1123,11 +1139,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8786825666214725898, guid: 5bdd50824324d744b8b98f1f909308b4, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8786825666214725898, guid: 5bdd50824324d744b8b98f1f909308b4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 11.138347
+      objectReference: {fileID: 0}
+    - target: {fileID: 8786825666214725898, guid: 5bdd50824324d744b8b98f1f909308b4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 11.138347
+      objectReference: {fileID: 0}
+    - target: {fileID: 8786825666214725898, guid: 5bdd50824324d744b8b98f1f909308b4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 11.138347
       objectReference: {fileID: 0}
     - target: {fileID: 8786825666214725898, guid: 5bdd50824324d744b8b98f1f909308b4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.3096695
+      value: -14.77
       objectReference: {fileID: 0}
     - target: {fileID: 8786825666214725898, guid: 5bdd50824324d744b8b98f1f909308b4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1171,6 +1199,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bdd50824324d744b8b98f1f909308b4, type: 3}
+--- !u!1001 &2304149239533546914
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5867448811209845290, guid: fe0b49a64bba0b44fbdeffb1bef261c6, type: 3}
+      propertyPath: m_Name
+      value: Mineable Green Gem(Needs to be Tall)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867448811209946634, guid: fe0b49a64bba0b44fbdeffb1bef261c6, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867448811209946634, guid: fe0b49a64bba0b44fbdeffb1bef261c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867448811209946634, guid: fe0b49a64bba0b44fbdeffb1bef261c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867448811209946634, guid: fe0b49a64bba0b44fbdeffb1bef261c6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867448811209946634, guid: fe0b49a64bba0b44fbdeffb1bef261c6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867448811209946634, guid: fe0b49a64bba0b44fbdeffb1bef261c6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867448811209946634, guid: fe0b49a64bba0b44fbdeffb1bef261c6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867448811209946634, guid: fe0b49a64bba0b44fbdeffb1bef261c6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867448811209946634, guid: fe0b49a64bba0b44fbdeffb1bef261c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867448811209946634, guid: fe0b49a64bba0b44fbdeffb1bef261c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867448811209946634, guid: fe0b49a64bba0b44fbdeffb1bef261c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe0b49a64bba0b44fbdeffb1bef261c6, type: 3}
 --- !u!1001 &3610516693270791743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1180,11 +1265,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7279539216263624107, guid: 90d2d2cc349a24f44be98bf3f52a47de, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279539216263624107, guid: 90d2d2cc349a24f44be98bf3f52a47de, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7.204923
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279539216263624107, guid: 90d2d2cc349a24f44be98bf3f52a47de, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7.204923
+      objectReference: {fileID: 0}
+    - target: {fileID: 7279539216263624107, guid: 90d2d2cc349a24f44be98bf3f52a47de, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 7.204923
       objectReference: {fileID: 0}
     - target: {fileID: 7279539216263624107, guid: 90d2d2cc349a24f44be98bf3f52a47de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.6796055
+      value: 9.63
       objectReference: {fileID: 0}
     - target: {fileID: 7279539216263624107, guid: 90d2d2cc349a24f44be98bf3f52a47de, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1192,7 +1289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7279539216263624107, guid: 90d2d2cc349a24f44be98bf3f52a47de, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.4921799
+      value: -9.38
       objectReference: {fileID: 0}
     - target: {fileID: 7279539216263624107, guid: 90d2d2cc349a24f44be98bf3f52a47de, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1228,6 +1325,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90d2d2cc349a24f44be98bf3f52a47de, type: 3}
+--- !u!1001 &4014709474656683913
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4971576891293262080, guid: 59241e90c07b5a34aa83b95bbba1b3ce, type: 3}
+      propertyPath: m_Name
+      value: Mineable Yellow Gem(Needs to be tall)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971576891293367584, guid: 59241e90c07b5a34aa83b95bbba1b3ce, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971576891293367584, guid: 59241e90c07b5a34aa83b95bbba1b3ce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971576891293367584, guid: 59241e90c07b5a34aa83b95bbba1b3ce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971576891293367584, guid: 59241e90c07b5a34aa83b95bbba1b3ce, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971576891293367584, guid: 59241e90c07b5a34aa83b95bbba1b3ce, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971576891293367584, guid: 59241e90c07b5a34aa83b95bbba1b3ce, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971576891293367584, guid: 59241e90c07b5a34aa83b95bbba1b3ce, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971576891293367584, guid: 59241e90c07b5a34aa83b95bbba1b3ce, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971576891293367584, guid: 59241e90c07b5a34aa83b95bbba1b3ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971576891293367584, guid: 59241e90c07b5a34aa83b95bbba1b3ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971576891293367584, guid: 59241e90c07b5a34aa83b95bbba1b3ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59241e90c07b5a34aa83b95bbba1b3ce, type: 3}
 --- !u!1001 &7043526398735608610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1241,11 +1395,15 @@ PrefabInstance:
       objectReference: {fileID: 1797931643}
     - target: {fileID: 7043526398713710075, guid: 077186bb3a3df2e469d73da3f7ba758f, type: 3}
       propertyPath: m_Name
-      value: Astronaut
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7043526398713710075, guid: 077186bb3a3df2e469d73da3f7ba758f, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7043526398713710075, guid: 077186bb3a3df2e469d73da3f7ba758f, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7043526398713878987, guid: 077186bb3a3df2e469d73da3f7ba758f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1470,11 +1628,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2693121560131884763, guid: 7789b4208d117034aa6cced3539cf1c1, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2693121560131884763, guid: 7789b4208d117034aa6cced3539cf1c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.672225
+      value: -9.29
       objectReference: {fileID: 0}
     - target: {fileID: 2693121560131884763, guid: 7789b4208d117034aa6cced3539cf1c1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1518,117 +1676,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7789b4208d117034aa6cced3539cf1c1, type: 3}
---- !u!1001 &7875906321529735967
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2582938698245678955, guid: 655139eadeec40741ad01cac76fbaf9e, type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582938698245678955, guid: 655139eadeec40741ad01cac76fbaf9e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.348906
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582938698245678955, guid: 655139eadeec40741ad01cac76fbaf9e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582938698245678955, guid: 655139eadeec40741ad01cac76fbaf9e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.0072603
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582938698245678955, guid: 655139eadeec40741ad01cac76fbaf9e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582938698245678955, guid: 655139eadeec40741ad01cac76fbaf9e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582938698245678955, guid: 655139eadeec40741ad01cac76fbaf9e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582938698245678955, guid: 655139eadeec40741ad01cac76fbaf9e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582938698245678955, guid: 655139eadeec40741ad01cac76fbaf9e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582938698245678955, guid: 655139eadeec40741ad01cac76fbaf9e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582938698245678955, guid: 655139eadeec40741ad01cac76fbaf9e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2582938698245782347, guid: 655139eadeec40741ad01cac76fbaf9e, type: 3}
-      propertyPath: m_Name
-      value: 'Mineable Green Gem '
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 655139eadeec40741ad01cac76fbaf9e, type: 3}
---- !u!1001 &8002209705950595902
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8174084395227423009, guid: 21fe9f3c0e3e2f9499bdf3806ae1a234, type: 3}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 8174084395227423009, guid: 21fe9f3c0e3e2f9499bdf3806ae1a234, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.4166565
-      objectReference: {fileID: 0}
-    - target: {fileID: 8174084395227423009, guid: 21fe9f3c0e3e2f9499bdf3806ae1a234, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.89
-      objectReference: {fileID: 0}
-    - target: {fileID: 8174084395227423009, guid: 21fe9f3c0e3e2f9499bdf3806ae1a234, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.3129139
-      objectReference: {fileID: 0}
-    - target: {fileID: 8174084395227423009, guid: 21fe9f3c0e3e2f9499bdf3806ae1a234, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8174084395227423009, guid: 21fe9f3c0e3e2f9499bdf3806ae1a234, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8174084395227423009, guid: 21fe9f3c0e3e2f9499bdf3806ae1a234, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8174084395227423009, guid: 21fe9f3c0e3e2f9499bdf3806ae1a234, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8174084395227423009, guid: 21fe9f3c0e3e2f9499bdf3806ae1a234, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8174084395227423009, guid: 21fe9f3c0e3e2f9499bdf3806ae1a234, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8174084395227423009, guid: 21fe9f3c0e3e2f9499bdf3806ae1a234, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8174084395227921665, guid: 21fe9f3c0e3e2f9499bdf3806ae1a234, type: 3}
-      propertyPath: m_Name
-      value: Mineable Yellow(Gold) Gem
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 21fe9f3c0e3e2f9499bdf3806ae1a234, type: 3}
