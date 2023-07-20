@@ -13,12 +13,6 @@ public class EnemySpawner : MonoBehaviour
         SpawnBlueEnemies(1);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void SpawnBlueEnemies(int howMany)
     {
         // Case for maxing out # of spawnPoints
