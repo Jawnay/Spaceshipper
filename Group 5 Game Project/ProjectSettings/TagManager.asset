@@ -15,6 +15,12 @@ TagManager:
   - dialogue4
   - dialogue5
   - dialouge6
+  - health_full
+  - health_5
+  - health_4
+  - health_3
+  - health_2
+  - health_1
   layers:
   - Default
   - TransparentFX
