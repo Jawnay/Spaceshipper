@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class player_health : MonoBehaviour
 {
@@ -54,6 +55,9 @@ public class player_health : MonoBehaviour
             case 15:
                 health1.SetActive(true);
                 health2.SetActive(false);
+                break;
+            case 0:
+                SceneManager.LoadScene(3);
                 break;
         }
     }

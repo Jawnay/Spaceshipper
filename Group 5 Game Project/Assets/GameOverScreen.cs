@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScreen : MonoBehaviour
 {
+    void Start() {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
+    }
 
     public void ChangeSceneToBuildIndexZero()
     {
