@@ -41,10 +41,10 @@ public class EnemyMovement : MonoBehaviour
     {
         state = EnemyState.Wander;
         target = null;
-
+        stats = GetComponent<EnemyStats>();
         anim = GetComponentInChildren<Animator>();
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
 
         invincible = false;
     }
@@ -171,7 +171,7 @@ public class EnemyMovement : MonoBehaviour
         return false;
     }
 
-    void TakeDamage()
+    public void TakeDamage()
     {
         if (!invincible)
         {
@@ -180,7 +180,7 @@ public class EnemyMovement : MonoBehaviour
             // Update health
             stats.health--;
 
-            KnockBack();
+            //KnockBack();
 
             // Play animation
             anim.SetBool("tookDamage", true);
@@ -196,7 +196,8 @@ public class EnemyMovement : MonoBehaviour
 
     void KnockBack()
     {
-        rb.AddForce(transform.forward * -5, ForceMode.Impulse);
+        rb.AddForce(transform.forward * -1, ForceMode.Impulse);
+        rb.AddForce(transform.up, ForceMode.Impulse);
     }
 
     void EndDamage()
