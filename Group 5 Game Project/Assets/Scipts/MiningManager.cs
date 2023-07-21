@@ -8,23 +8,61 @@ public class MiningManager : MonoBehaviour
     [SerializeField] private float range;
     [SerializeField] private LayerMask mineableObject;
     [SerializeField] private ObjectsHealth objectsHealth;
+    private Transform playerTransform;
+    [SerializeField] private itemAppear itemAppear; // Reference to the ItemAppear script
 
-    // Start is called before the first frame update
+
+
+
+
     void Start()
     {
-        
+        GameObject playerCharacter = GameObject.FindGameObjectWithTag("Player");
+        if (playerCharacter != null)
+        {
+            playerTransform = playerCharacter.transform;
+            itemAppear = playerCharacter.GetComponent<itemAppear>();
+        }
+        else
+        {
+            Debug.LogError("Player not found! Make sure to tag your player character with 'Player'.");
+        }
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)){
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if(Physics.Raycast(ray, out hit, range, mineableObject)){
-                objectsHealth = hit.transform.GetComponent<ObjectsHealth>(); 
-                objectsHealth.objectsHealth -= damage;
+        if (playerTransform == null || itemAppear == null)
+        {
+            return;
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (itemAppear.pickaxe) // Check if the pickaxe is equipped
+            {
+                // Calculate the mining direction based on the player's facing direction
+                Vector3 miningDirection = playerTransform.forward;
+
+                // Create a ray starting from the player's position in the mining direction
+                Ray ray = new Ray(playerTransform.position, miningDirection);
+
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit, range, mineableObject))
+                {
+                    objectsHealth = hit.transform.GetComponent<ObjectsHealth>();
+                    objectsHealth.objectsHealth -= damage;
+                }
+            }
+            else
+            {
+                // Player does not have the pickaxe equipped, so they can't mine.
+                Debug.Log("You need a pickaxe to mine!");
             }
         }
     }
+
+
 }
+
+

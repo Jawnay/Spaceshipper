@@ -108,9 +108,9 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 60
-    agentClimb: 0.6
-    ledgeDropHeight: 10
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 8f041a4debb31c34497289cc763cfd6f, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!1001 &12087432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3866,14 +3866,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7114477946327915104, guid: 6c4666854e9d65b4a9d1f9e20bf9afc6, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7701820784397840645, guid: 6c4666854e9d65b4a9d1f9e20bf9afc6, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 9194986828312058385, guid: 6c4666854e9d65b4a9d1f9e20bf9afc6, type: 3}
       propertyPath: m_Name
       value: Base Pad (1)
@@ -3921,10 +3913,6 @@ PrefabInstance:
     - target: {fileID: 9194986828312058386, guid: 6c4666854e9d65b4a9d1f9e20bf9afc6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9194986828704372721, guid: 6c4666854e9d65b4a9d1f9e20bf9afc6, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c4666854e9d65b4a9d1f9e20bf9afc6, type: 3}
@@ -6206,7 +6194,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 127
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!154 &1199291281
 TerrainCollider:
@@ -11562,25 +11550,6 @@ MonoBehaviour:
   playerDash: {fileID: 0}
   pickaxe: 0
   sword: 0
---- !u!114 &1949351858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1949351846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb6f838c6d7d6064686276cb1131b2b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthfull: {fileID: 0}
-  health5: {fileID: 0}
-  health4: {fileID: 0}
-  health3: {fileID: 0}
-  health2: {fileID: 0}
-  health1: {fileID: 0}
-  health: 90
 --- !u!1 &1961730227
 GameObject:
   m_ObjectHideFlags: 0
