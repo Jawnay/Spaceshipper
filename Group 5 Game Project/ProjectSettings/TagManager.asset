@@ -21,6 +21,7 @@ TagManager:
   - health_1
   - dialogue6
   - dialogue3
+  - Enemy
   layers:
   - Default
   - TransparentFX
