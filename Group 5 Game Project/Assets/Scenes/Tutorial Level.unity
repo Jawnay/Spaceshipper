@@ -5689,7 +5689,7 @@ GameObject:
   - component: {fileID: 1087072551}
   m_Layer: 0
   m_Name: upgrade_area
-  m_TagString: Untagged
+  m_TagString: dialouge6
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11842,7 +11842,7 @@ GameObject:
   - component: {fileID: 1984924613}
   m_Layer: 0
   m_Name: rock_area2
-  m_TagString: Untagged
+  m_TagString: dialgoue3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
