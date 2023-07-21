@@ -9,16 +9,19 @@ public class MiningManager : MonoBehaviour
     [SerializeField] private LayerMask mineableObject;
     [SerializeField] private ObjectsHealth objectsHealth;
     private Transform playerTransform;
+    [SerializeField] private itemAppear itemAppear; // Reference to the ItemAppear script
+
+
+
+
 
     void Start()
     {
-        // Find the player character using the "Player" tag
         GameObject playerCharacter = GameObject.FindGameObjectWithTag("Player");
-
-        // Check if the player character was found
         if (playerCharacter != null)
         {
             playerTransform = playerCharacter.transform;
+            itemAppear = playerCharacter.GetComponent<itemAppear>();
         }
         else
         {
@@ -26,28 +29,40 @@ public class MiningManager : MonoBehaviour
         }
     }
 
+
     void Update()
     {
-        // If playerTransform is still not assigned, exit the Update function
-        if (playerTransform == null)
+        if (playerTransform == null || itemAppear == null)
         {
             return;
         }
 
         if (Input.GetMouseButtonDown(0))
         {
-            // Calculate the mining direction based on the player's facing direction
-            Vector3 miningDirection = playerTransform.forward;
-
-            // Create a ray starting from the player's position in the mining direction
-            Ray ray = new Ray(playerTransform.position, miningDirection);
-
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, range, mineableObject))
+            if (itemAppear.pickaxe) // Check if the pickaxe is equipped
             {
-                objectsHealth = hit.transform.GetComponent<ObjectsHealth>();
-                objectsHealth.objectsHealth -= damage;
+                // Calculate the mining direction based on the player's facing direction
+                Vector3 miningDirection = playerTransform.forward;
+
+                // Create a ray starting from the player's position in the mining direction
+                Ray ray = new Ray(playerTransform.position, miningDirection);
+
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit, range, mineableObject))
+                {
+                    objectsHealth = hit.transform.GetComponent<ObjectsHealth>();
+                    objectsHealth.objectsHealth -= damage;
+                }
+            }
+            else
+            {
+                // Player does not have the pickaxe equipped, so they can't mine.
+                Debug.Log("You need a pickaxe to mine!");
             }
         }
     }
+
+
 }
+
+
