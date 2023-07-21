@@ -15,6 +15,7 @@ public class EnemyMovement : MonoBehaviour
     public EnemyState state;
     public Transform target;
     private UnityEngine.AI.NavMeshAgent agent;
+    public Rigidbody rb;
     private float timer;
     public float wanderRadius;
     public float wanderTimer;
@@ -31,13 +32,21 @@ public class EnemyMovement : MonoBehaviour
     // Vision
     private int visionRange = 10;   // Max range for raycast
 
+    // Stats
+    public EnemyStats stats;
+    public bool invincible;
+
     // Start is called before the first frame update
     void Start()
     {
         state = EnemyState.Wander;
         target = null;
+
         anim = GetComponentInChildren<Animator>();
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        rb = GetComponent<Rigidbody>();
+
+        invincible = false;
     }
 
     // Update is called once per frame
@@ -122,17 +131,7 @@ public class EnemyMovement : MonoBehaviour
         }
         else
         {
-            // Chase player
-            // if (TargetInMeleeRange())
-            // {
-            //     // Stand still to attack
-            //     agent.SetDestination(target.position);
-            //     agent.SetDestination(gameObject.transform.position);
-            // }
-            // else
-            // {
-                agent.SetDestination(target.position);
-            // }
+            agent.SetDestination(target.position);
         }
     }
 
@@ -170,5 +169,44 @@ public class EnemyMovement : MonoBehaviour
             }
         }
         return false;
+    }
+
+    void TakeDamage()
+    {
+        if (!invincible)
+        {
+            invincible = true;
+
+            // Update health
+            stats.health--;
+
+            KnockBack();
+
+            // Play animation
+            anim.SetBool("tookDamage", true);
+            Invoke("EndDamage", 1.5f);
+
+            if (stats.health == 0)
+            {
+                anim.SetBool("isDead", true);
+                Invoke("Die", 1.5f);
+            }
+        }
+    }
+
+    void KnockBack()
+    {
+        rb.AddForce(transform.forward * -5, ForceMode.Impulse);
+    }
+
+    void EndDamage()
+    {
+        anim.SetBool("tookDamage", false);
+        invincible = false;
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
     }
 }
