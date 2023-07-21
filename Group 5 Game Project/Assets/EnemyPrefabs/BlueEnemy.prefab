@@ -139,12 +139,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   target: {fileID: 0}
+  rb: {fileID: 0}
   wanderRadius: 10
   wanderTimer: 5
   meleeRange: 2
   attack: {fileID: 0}
   speed: 0
   anim: {fileID: 0}
+  stats: {fileID: 0}
+  invincible: 0
 --- !u!114 &4364498285652108296
 MonoBehaviour:
   m_ObjectHideFlags: 0
