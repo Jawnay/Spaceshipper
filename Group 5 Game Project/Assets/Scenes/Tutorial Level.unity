@@ -13073,10 +13073,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5652667403050581872, guid: 2a76177dfd5e8b54aa487ac8c170e475, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 56
+      objectReference: {fileID: 0}
     - target: {fileID: 5652667403050581873, guid: 2a76177dfd5e8b54aa487ac8c170e475, type: 3}
       propertyPath: m_text
-      value: Press 1 to change to your Pickaxe and 2 to change to your Sword! Press
-        E to use the dash option and use left click on the mouse to interact.
+      value: The ship needs you to mine one blue rock and one green rock! Press 1
+        to change to your Pickaxe and 2 to change to your Sword! Press E to use the
+        dash option and use left click on the mouse to interact.
       objectReference: {fileID: 0}
     - target: {fileID: 5652667403050581873, guid: 2a76177dfd5e8b54aa487ac8c170e475, type: 3}
       propertyPath: m_fontSize
@@ -17665,6 +17670,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Amount
       objectReference: {fileID: 0}
+    - target: {fileID: 646277690352930934, guid: a685ca8e9a1e37543ad5944094fe2922, type: 3}
+      propertyPath: m_text
+      value: 'Points:'
+      objectReference: {fileID: 0}
     - target: {fileID: 646277690352930935, guid: a685ca8e9a1e37543ad5944094fe2922, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -17731,11 +17740,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 646277690352930935, guid: a685ca8e9a1e37543ad5944094fe2922, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 249
+      value: 207
       objectReference: {fileID: 0}
     - target: {fileID: 646277690352930935, guid: a685ca8e9a1e37543ad5944094fe2922, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 309
+      value: 261
       objectReference: {fileID: 0}
     - target: {fileID: 646277690352930935, guid: a685ca8e9a1e37543ad5944094fe2922, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -17828,11 +17837,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6107136930087899834, guid: bdbf85eb6d3a84445a716c5bf8be9414, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 451
+      value: 322
       objectReference: {fileID: 0}
     - target: {fileID: 6107136930087899834, guid: bdbf85eb6d3a84445a716c5bf8be9414, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 309
+      value: 261
       objectReference: {fileID: 0}
     - target: {fileID: 6107136930087899834, guid: bdbf85eb6d3a84445a716c5bf8be9414, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
