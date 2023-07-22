@@ -3532,7 +3532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5652667403050581873, guid: 2a76177dfd5e8b54aa487ac8c170e475, type: 3}
       propertyPath: m_text
-      value: This is the cargo ship press (key) to turn in the required materials.
+      value: This is the cargo ship walk up to it to turn in the required materials.
         Come to this area at the start of the level to find out what you need and
         remember to do everything in time!
       objectReference: {fileID: 0}
@@ -3745,11 +3745,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5652667402195493874, guid: 2a76177dfd5e8b54aa487ac8c170e475, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -114
+      value: -62.5
       objectReference: {fileID: 0}
     - target: {fileID: 5652667402195493874, guid: 2a76177dfd5e8b54aa487ac8c170e475, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -22
+      value: -4.7
       objectReference: {fileID: 0}
     - target: {fileID: 5652667402683066817, guid: 2a76177dfd5e8b54aa487ac8c170e475, type: 3}
       propertyPath: m_Pivot.x
