@@ -18,7 +18,6 @@ public class ShopkeeperDialog : MonoBehaviour
         {
             target = other.gameObject;
             targetSpotted = true;
-            Debug.Log("Player spotted.");
         }
     }
 
@@ -27,7 +26,6 @@ public class ShopkeeperDialog : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             targetSpotted = false;
-            Debug.Log("Player out of sight.");
         }
     }
 }
