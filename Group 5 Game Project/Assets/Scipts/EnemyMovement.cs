@@ -75,7 +75,8 @@ public class EnemyMovement : MonoBehaviour
         Ray ray = new Ray(transform.position, relativeForward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, visionRange))
+        // if (Physics.Raycast(ray, out hit, visionRange))
+        if (Physics.SphereCast(transform.position, 2.5f, relativeForward, out hit, visionRange))
         {
             GameObject spotted = hit.transform.gameObject;
 

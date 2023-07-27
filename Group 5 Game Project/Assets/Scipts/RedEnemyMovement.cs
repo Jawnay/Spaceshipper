@@ -36,6 +36,9 @@ public class RedEnemyMovement : MonoBehaviour
     public RedEnemyStats stats;
     public bool invincible;
 
+    // Babies
+    public GameObject blueEnemy;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,7 +78,8 @@ public class RedEnemyMovement : MonoBehaviour
         Ray ray = new Ray(transform.position, relativeForward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, visionRange))
+        // if (Physics.Raycast(ray, out hit, visionRange))
+        if (Physics.SphereCast(transform.position, 2.5f, relativeForward, out hit, visionRange))
         {
             GameObject spotted = hit.transform.gameObject;
 
@@ -179,7 +183,7 @@ public class RedEnemyMovement : MonoBehaviour
             // Update health
             stats.health--;
 
-            //KnockBack();
+            // KnockBack();
 
             // Play animation
             anim.SetBool("tookDamage", true);
@@ -193,11 +197,11 @@ public class RedEnemyMovement : MonoBehaviour
         }
     }
 
-    void KnockBack()
-    {
-        rb.AddForce(transform.forward * -1, ForceMode.Impulse);
-        rb.AddForce(transform.up, ForceMode.Impulse);
-    }
+    // void KnockBack()
+    // {
+    //     rb.AddForce(transform.forward * -1, ForceMode.Impulse);
+    //     rb.AddForce(transform.up, ForceMode.Impulse);
+    // }
 
     void EndDamage()
     {
@@ -207,6 +211,15 @@ public class RedEnemyMovement : MonoBehaviour
 
     void Die()
     {
+        // Determine spawn points for babies
+        Vector3 babySpawn1 = RandomWander(transform.position, wanderRadius, -1);
+        Vector3 babySpawn2 = RandomWander(transform.position, wanderRadius, -1);
+
+        // Spawn babies
+        Instantiate(blueEnemy, babySpawn1, transform.rotation);
+        Instantiate(blueEnemy, babySpawn2, transform.rotation);
+
+        // Destory parent
         Destroy(gameObject);
     }
 }
