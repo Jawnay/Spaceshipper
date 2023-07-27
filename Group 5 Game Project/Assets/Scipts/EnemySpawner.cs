@@ -6,11 +6,16 @@ public class EnemySpawner : MonoBehaviour
 {
     public Transform[] spawnPoints;
     public GameObject blueEnemy; // Blue enemy prefab
+    public GameObject redEnemy;  // Red enemy prefab
+
+    int nextSpawnPoint;
 
     // Start is called before the first frame update
     void Start()
     {
+        nextSpawnPoint = 0;
         SpawnBlueEnemies(1);
+        SpawnRedEnemies(1);
     }
 
     public void SpawnBlueEnemies(int howMany)
@@ -23,13 +28,25 @@ public class EnemySpawner : MonoBehaviour
 
         for (int i = 0; i < howMany; i++)
         {
-            Debug.Log("Instantiate: Spawning enemy.");
+            UnityEngine.AI.NavMeshHit spawn = GenerateSpawnFromPoint(spawnPoints[nextSpawnPoint]);
+            GameObject newEnemy = Instantiate(blueEnemy, spawn.position, spawnPoints[nextSpawnPoint].rotation);
+            nextSpawnPoint++;
+        }
+    }
 
-            UnityEngine.AI.NavMeshHit spawn = GenerateSpawnFromPoint(spawnPoints[i]);
+    public void SpawnRedEnemies(int howMany)
+    {
+        // Case for maxing out # of spawnPoints
+        if (howMany > spawnPoints.Length)
+        {
+            howMany = spawnPoints.Length;
+        }
 
-            GameObject newEnemy = Instantiate(blueEnemy, spawn.position, spawnPoints[i].rotation);
-            // UnityEngine.AI.NavMeshAgent newAgent = newEnemy.GetComponent<UnityEngine.AI.NavMeshAgent>();
-            // newAgent.enabled = false;
+        for (int i = 0; i < howMany; i++)
+        {
+            UnityEngine.AI.NavMeshHit spawn = GenerateSpawnFromPoint(spawnPoints[nextSpawnPoint]);
+            GameObject newEnemy = Instantiate(redEnemy, spawn.position, spawnPoints[nextSpawnPoint].rotation);
+            nextSpawnPoint++;
         }
     }
 
