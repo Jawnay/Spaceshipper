@@ -14,6 +14,7 @@ public class EnemyAttack : MonoBehaviour
     // Enables the attack hitbox trigger
     void Attack()
     {
+        // Debug.Log("Attack");
         attack.SetActive(true);
     }
 

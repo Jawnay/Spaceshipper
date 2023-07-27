@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class RedEnemyMovement : MonoBehaviour
 {
     public enum EnemyState
     {
@@ -30,21 +30,24 @@ public class EnemyMovement : MonoBehaviour
     public Animator anim;
 
     // Vision
-    private int visionRange = 10;   // Max range for raycast
+    private int visionRange = 20;   // Max range for raycast
 
     // Stats
-    public EnemyStats stats;
+    public RedEnemyStats stats;
     public bool invincible;
+
+    // Babies
+    public GameObject blueEnemy;
 
     // Start is called before the first frame update
     void Start()
     {
         state = EnemyState.Wander;
         target = null;
-        stats = GetComponent<EnemyStats>();
+        stats = GetComponent<RedEnemyStats>();
         anim = GetComponentInChildren<Animator>();
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        //rb = GetComponent<Rigidbody>();
+        timer = 0;
 
         invincible = false;
     }
@@ -106,8 +109,6 @@ public class EnemyMovement : MonoBehaviour
         if (TargetInMeleeRange())
         {
             anim.SetBool("inMeleeRange", true);
-            // Invoke("Attack", 0.3f);
-            // Invoke("DisableAttack", 0.8f);
         }
         else
         {    
@@ -163,7 +164,8 @@ public class EnemyMovement : MonoBehaviour
     // Returns true if the target is being chased and is within melee range.
     bool TargetInMeleeRange()
     {
-        if (target != null){
+        if (target != null)
+        {
             if (target.position.x - transform.position.x < meleeRange && target.position.z - transform.position.z < meleeRange)
             {
                 return true;
@@ -181,7 +183,7 @@ public class EnemyMovement : MonoBehaviour
             // Update health
             stats.health--;
 
-            //KnockBack();
+            // KnockBack();
 
             // Play animation
             anim.SetBool("tookDamage", true);
@@ -195,11 +197,11 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    void KnockBack()
-    {
-        rb.AddForce(transform.forward * -1, ForceMode.Impulse);
-        rb.AddForce(transform.up, ForceMode.Impulse);
-    }
+    // void KnockBack()
+    // {
+    //     rb.AddForce(transform.forward * -1, ForceMode.Impulse);
+    //     rb.AddForce(transform.up, ForceMode.Impulse);
+    // }
 
     void EndDamage()
     {
@@ -209,6 +211,15 @@ public class EnemyMovement : MonoBehaviour
 
     void Die()
     {
+        // Determine spawn points for babies
+        Vector3 babySpawn1 = RandomWander(transform.position, wanderRadius, -1);
+        Vector3 babySpawn2 = RandomWander(transform.position, wanderRadius, -1);
+
+        // Spawn babies
+        Instantiate(blueEnemy, babySpawn1, transform.rotation);
+        Instantiate(blueEnemy, babySpawn2, transform.rotation);
+
+        // Destory parent
         Destroy(gameObject);
     }
 }
