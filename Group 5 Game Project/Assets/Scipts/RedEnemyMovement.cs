@@ -39,6 +39,9 @@ public class RedEnemyMovement : MonoBehaviour
     // Babies
     public GameObject blueEnemy;
 
+    // Coins
+    [SerializeField] private CoinResources coinResources;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +53,7 @@ public class RedEnemyMovement : MonoBehaviour
         timer = 0;
 
         invincible = false;
+        coinResources = GameObject.Find("Coin Resources").GetComponent<CoinResources>();
     }
 
     // Update is called once per frame
@@ -220,6 +224,7 @@ public class RedEnemyMovement : MonoBehaviour
         Instantiate(blueEnemy, babySpawn2, transform.rotation);
 
         // Destory parent
+        coinResources.value += Random.Range(1,3);
         Destroy(gameObject);
     }
 }
