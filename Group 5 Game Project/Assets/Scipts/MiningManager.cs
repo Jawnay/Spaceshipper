@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MiningManager : MonoBehaviour
 {
-    [SerializeField] private int damage;
+    public int damage;
     [SerializeField] private float range;
     [SerializeField] private LayerMask mineableObject;
     [SerializeField] private ObjectsHealth objectsHealth;

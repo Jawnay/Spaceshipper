@@ -9,6 +9,7 @@ public class itemAppear : MonoBehaviour
     public GameObject playerDash;
     public bool pickaxe = false;
     public bool sword = false;
+    public AudioSource clip;
     // Update is called once per frame
     void Start()
     {
@@ -22,6 +23,14 @@ public class itemAppear : MonoBehaviour
 
     void Update()
     {
+        if(sword == true || pickaxe == true)
+        {
+            if(Input.GetMouseButtonDown(0))
+            {
+                Debug.Log("Click");
+                clip.Play();
+            }
+        }
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
             pickaxe = true;
             sword = false;
