@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private itemAppear itemAppear;
-    private Transform enemyHitboxTransform; // Reference to the EnemyHitbox GameObject's Transform
+    private Transform enemyHitboxTransform; // Reference to the EnemyHitbox GameObject's Transform    
 
     void Start()
     {
