@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7875906322434831044}
   m_Layer: 3
   m_Name: 'Mineable Green Gem '
-  m_TagString: Untagged
+  m_TagString: GreenOre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

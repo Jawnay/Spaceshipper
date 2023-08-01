@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6079756926630393143}
   m_Layer: 3
   m_Name: Mineable Blue Gem
-  m_TagString: Untagged
+  m_TagString: BlueOre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 6963962924065949931}
   m_Layer: 3
   m_Name: Mineable Red Gem
-  m_TagString: Untagged
+  m_TagString: RedOre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

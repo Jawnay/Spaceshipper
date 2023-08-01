@@ -39,7 +39,7 @@ public class ShipTriggerScript : MonoBehaviour
         {
             Debug.Log("In trigger");
             playerResourcesScript = PlayerResources.GetComponent<PlayerResources>();
-            matCollected = playerResourcesScript.value;
+            //matCollected = playerResourcesScript.value;
             hasRocks();
         }
     }

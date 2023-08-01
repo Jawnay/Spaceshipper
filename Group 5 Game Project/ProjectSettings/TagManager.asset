@@ -23,6 +23,11 @@ TagManager:
   - dialogue3
   - Enemy
   - RedEnemy
+  - RedOre
+  - YellowOre
+  - OrangeOre
+  - GreenOre
+  - BlueOre
   layers:
   - Default
   - TransparentFX
