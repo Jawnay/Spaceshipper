@@ -22,6 +22,7 @@ TagManager:
   - dialogue6
   - dialogue3
   - Enemy
+  - RedEnemy
   layers:
   - Default
   - TransparentFX

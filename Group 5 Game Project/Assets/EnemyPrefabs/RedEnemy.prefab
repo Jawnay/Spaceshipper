@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4768671709525503587
 Transform:
   m_ObjectHideFlags: 0
@@ -44,8 +44,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8736595, y: 0.7799174, z: 0.8097598}
-  m_Center: {x: 0.0064352355, y: 0.63441086, z: 0.25790724}
+  m_Size: {x: 0.8736595, y: 0.89956796, z: 0.8097598}
+  m_Center: {x: 0.0064352355, y: 0.5745856, z: 0.25790724}
 --- !u!114 &4768671709525503584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 4768671710004812322}
   m_Layer: 0
   m_Name: RedEnemy
-  m_TagString: Enemy
+  m_TagString: RedEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   stats: {fileID: 0}
   invincible: 0
-  blueEnemy: {fileID: 0}
+  blueEnemy: {fileID: 137046924169599102, guid: 1c09fc80dd2c3af45a85edc00e5c51a5, type: 3}
 --- !u!114 &4768671710004812322
 MonoBehaviour:
   m_ObjectHideFlags: 0

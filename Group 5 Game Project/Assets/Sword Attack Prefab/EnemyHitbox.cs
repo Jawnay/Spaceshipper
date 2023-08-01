@@ -21,5 +21,10 @@ public class EnemyHitbox : MonoBehaviour
             Debug.Log("Player hit the enemy.");
             other.gameObject.GetComponentInChildren<EnemyMovement>().TakeDamage();
         }
+        if (other.CompareTag("RedEnemy"))
+        {
+            Debug.Log("Player hit the enemy.");
+            other.gameObject.GetComponentInChildren<RedEnemyMovement>().TakeDamage();
+        }
     }
 }
