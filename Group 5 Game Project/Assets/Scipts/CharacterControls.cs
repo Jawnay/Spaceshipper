@@ -172,7 +172,7 @@ public class CharacterControls : MonoBehaviour
             {
                 StartSpeedBoost();
                 StartAirSpeedBoost();
-                speedBoostCount++;
+                maxSpeedBoostCount--;
             }
             else
             {
