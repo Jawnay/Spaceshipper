@@ -3,12 +3,31 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Pickaxe_pedastal
+  - Pickaxe_player
+  - sword
+  - dash
+  - dialogue
+  - dialogue1
+  - dialogue2
+  - dialogue4
+  - dialogue5
+  - health_full
+  - health_5
+  - health_4
+  - health_3
+  - health_2
+  - health_1
+  - dialogue6
+  - dialogue3
+  - Enemy
+  - RedEnemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Mineable Object
   - Water
   - UI
   - 
