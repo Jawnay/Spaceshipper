@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class EnemyHitbox : MonoBehaviour
 {
-    public void ActivateHitbox()
+    public int damage;
+
+    void Start()
     {
-        gameObject.SetActive(true);
+        damage = 1;
     }
 
-    public void DeactivateHitbox()
+    // Increases damage by 1
+    public void Upgrade()
     {
-        gameObject.SetActive(false);
+        damage++;
     }
 
     void OnTriggerEnter(Collider other)
@@ -19,12 +22,12 @@ public class EnemyHitbox : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             Debug.Log("Player hit the enemy.");
-            other.gameObject.GetComponentInChildren<EnemyMovement>().TakeDamage();
+            other.gameObject.GetComponentInChildren<EnemyMovement>().TakeDamage(damage);
         }
         if (other.CompareTag("RedEnemy"))
         {
             Debug.Log("Player hit the enemy.");
-            other.gameObject.GetComponentInChildren<RedEnemyMovement>().TakeDamage();
+            other.gameObject.GetComponentInChildren<RedEnemyMovement>().TakeDamage(damage);
         }
     }
 }

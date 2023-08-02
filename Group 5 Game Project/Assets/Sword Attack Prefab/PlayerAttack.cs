@@ -7,6 +7,8 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private itemAppear itemAppear;
     private Transform enemyHitboxTransform; // Reference to the EnemyHitbox GameObject's Transform
 
+    bool canSwing; // Forces user to let go of left click to be able to attack again.
+
     void Start()
     {
         // Find and get the components from the player character
@@ -46,15 +48,19 @@ public class PlayerAttack : MonoBehaviour
             if (itemAppear.sword)
             {
                 // Enable the enemy hitbox to detect collisions
-                enemyHitboxTransform.gameObject.SetActive(true);
+                ActivateHitbox();
+                Invoke("DeactivateHitbox", 0.1f);
             }
         }
+    }
 
-        // Check for player input to stop attacking
-        if (Input.GetMouseButtonUp(0))
-        {
-            // Disable the enemy hitbox when the player stops attacking
-            enemyHitboxTransform.gameObject.SetActive(false);
-        }
+    public void ActivateHitbox()
+    {
+        enemyHitboxTransform.gameObject.SetActive(true);
+    }
+
+    public void DeactivateHitbox()
+    {
+        enemyHitboxTransform.gameObject.SetActive(false);
     }
 }
