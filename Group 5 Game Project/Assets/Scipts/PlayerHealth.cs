@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class player_health : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
     public GameObject healthfull;
     public GameObject health5;
@@ -20,7 +20,7 @@ public class player_health : MonoBehaviour
         health3 = GameObject.FindGameObjectWithTag("health_3");
         health2 = GameObject.FindGameObjectWithTag("health_2");
         health1 = GameObject.FindGameObjectWithTag("health_1");
-        healthfull.SetActive(true);
+        healthfull.SetActive(true); // might be able to remove this
         health5.SetActive(false);
         health4.SetActive(false);
         health3.SetActive(false);
@@ -30,12 +30,20 @@ public class player_health : MonoBehaviour
     
     void Update()
     {
-        PlayerHealth(health);
+        playerHealth(health);
     }
 
-    void PlayerHealth(int health) {
+    void playerHealth(int health) {
         switch (health)
         {
+            case 90:
+                healthfull.SetActive(true);
+                health5.SetActive(false);
+                health4.SetActive(false);
+                health3.SetActive(false);
+                health2.SetActive(false);
+                health1.SetActive(false);
+                break;
             case 75:
                 healthfull.SetActive(false);
                 health5.SetActive(true);
