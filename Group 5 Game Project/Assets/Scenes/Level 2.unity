@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17507389, g: 0.21902215, b: 0.30131987, a: 1}
+  m_IndirectSpecularColor: {r: 0.17507434, g: 0.21902287, b: 0.30132085, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4386,8 +4386,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -369.1272, y: 165.9}
-  m_SizeDelta: {x: 180.5456, y: 100}
+  m_AnchoredPosition: {x: 190, y: 522}
+  m_SizeDelta: {x: 179.5339, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &497401098
 MonoBehaviour:
@@ -6089,7 +6089,7 @@ GameObject:
   - component: {fileID: 716863572}
   m_Layer: 0
   m_Name: dashes_l
-  m_TagString: Untagged
+  m_TagString: dash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

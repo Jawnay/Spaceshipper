@@ -10,14 +10,14 @@ public class dash_display : MonoBehaviour
     void Start()
     {
          playerGameObject = GameObject.FindGameObjectWithTag("Player");
-        int charactercontrols = playerGameObject.GetComponent<CharacterControls>().maxSpeedBoostCount;
+        CharacterControls charactercontrols = playerGameObject.GetComponent<CharacterControls>();
         Debug.Log("please update" + charactercontrols);
         if (charactercontrols == null)
         {
             Debug.LogError("characterControls script not assigned in the Inspector!");
             return;
         }
-        GameObject dashesLGameObject = GameObject.Find("dashes_l");
+        GameObject dashesLGameObject = GameObject.FindGameObjectWithTag("dash");
         if (dashesLGameObject == null)
         {
             Debug.LogError("dashes_l GameObject not found!");
@@ -31,7 +31,7 @@ public class dash_display : MonoBehaviour
             return;
         }
 
-        UpdateHUD(charactercontrols);
+        UpdateHUD(charactercontrols.maxSpeedBoostCount);
         
     }
 
@@ -39,17 +39,18 @@ public class dash_display : MonoBehaviour
     void Update()
     {
         playerGameObject = GameObject.FindGameObjectWithTag("Player");
-        int charactercontrols = playerGameObject.GetComponent<CharacterControls>().maxSpeedBoostCount;
-        UpdateHUD(charactercontrols);
+        CharacterControls charactercontrols = playerGameObject.GetComponent<CharacterControls>();
+        UpdateHUD(charactercontrols.maxSpeedBoostCount);
         
     }
 
     private void UpdateHUD(int value) 
     {
          Debug.Log("UpdateHUD called with value: " + value);
-        GameObject dashesLGameObject = GameObject.Find("dashes_l");
+        GameObject dashesLGameObject = GameObject.FindGameObjectWithTag("dash");
         if (dashesLGameObject != null)
         {
+            Debug.Log("I am here");
             Text numberText = dashesLGameObject.GetComponent<Text>();
             if (numberText != null)
             {
