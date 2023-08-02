@@ -47,6 +47,7 @@ public class MiningManager : MonoBehaviour
                 if (Physics.Raycast(ray, out hit, range, mineableObject))
                 {
                     objectsHealth = hit.transform.GetComponent<ObjectsHealth>();
+                    objectsHealth.oreType = hit.transform.tag;
                     objectsHealth.objectsHealth -= damage;
                 }
             }

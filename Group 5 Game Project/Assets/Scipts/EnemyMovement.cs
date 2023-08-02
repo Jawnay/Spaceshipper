@@ -36,6 +36,9 @@ public class EnemyMovement : MonoBehaviour
     public EnemyStats stats;
     public bool invincible;
 
+    // Coins
+    [SerializeField] private CoinResources coinResources;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +50,7 @@ public class EnemyMovement : MonoBehaviour
         //rb = GetComponent<Rigidbody>();
 
         invincible = false;
+        coinResources = GameObject.Find("Coin Resources").GetComponent<CoinResources>();
     }
 
     // Update is called once per frame
@@ -209,6 +213,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Die()
     {
+        coinResources.value += Random.Range(1,3);
         Destroy(gameObject);
     }
 }

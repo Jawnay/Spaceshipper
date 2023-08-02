@@ -34,6 +34,10 @@ public class CharacterControls : MonoBehaviour
     private float boostTimer = 0f;
 
 	private bool isSpeedBoosting = false;
+    private bool isAirSpeedBoosting = false;
+    private float originalAirVelocity;
+    public int maxSpeedBoostCount = 3; // Maximum number of times the speed boost can be used
+    private int speedBoostCount = 0; // Current count of speed boost usage
 	private Animator animator;
 
 
@@ -57,6 +61,7 @@ public class CharacterControls : MonoBehaviour
         checkPoint = transform.position;
         Cursor.visible = false;
 		animator = GetComponent<Animator>();
+        originalAirVelocity = airVelocity;
     }
 
     void FixedUpdate()
@@ -161,9 +166,19 @@ public class CharacterControls : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && speedBoostCount < maxSpeedBoostCount)
         {
-            StartSpeedBoost();
+            if (!isSpeedBoosting)
+            {
+                StartSpeedBoost();
+                StartAirSpeedBoost();
+                maxSpeedBoostCount--;
+            }
+            else
+            {
+                StopSpeedBoost();
+                StopAirSpeedBoost();
+            }
         }
 
         if (isBoosting)
@@ -244,12 +259,35 @@ public class CharacterControls : MonoBehaviour
         }
     }
 
+    private void StartAirSpeedBoost()
+    {
+        if (!isAirSpeedBoosting)
+        {
+            isAirSpeedBoosting = true;
+            // Apply the air velocity increase
+            airVelocity *= boostMultiplier;
+        }
+    }
+
     private void StopSpeedBoost()
     {
         if (isBoosting)
         {
             isBoosting = false;
 			animator.SetBool("SpeedBoost", false);
+            StopAirSpeedBoost();
+        }
+    }
+
+    private void StopAirSpeedBoost()
+    {
+        if (isAirSpeedBoosting)
+        {
+            isAirSpeedBoosting = false;
+            // Reset the air velocity to its original value
+            airVelocity = originalAirVelocity;
+            //Debug.Log("Stop Air Speed Boost was called");
+
         }
     }
 }

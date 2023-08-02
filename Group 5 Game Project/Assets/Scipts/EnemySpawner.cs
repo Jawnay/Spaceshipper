@@ -15,7 +15,7 @@ public class EnemySpawner : MonoBehaviour
     {
         nextSpawnPoint = 0;
         SpawnBlueEnemies(1);
-        SpawnRedEnemies(1);
+        SpawnRedEnemies(2);
     }
 
     public void SpawnBlueEnemies(int howMany)
