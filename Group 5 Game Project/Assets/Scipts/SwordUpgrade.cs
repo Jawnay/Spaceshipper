@@ -37,6 +37,7 @@ public class SwordUpgrade : MonoBehaviour
             return true;
         }
 
+        Debug.Log("Can't afford!");
         return false;
     }
 

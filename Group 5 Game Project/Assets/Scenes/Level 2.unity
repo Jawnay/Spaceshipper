@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17507389, g: 0.21902215, b: 0.30131987, a: 1}
+  m_IndirectSpecularColor: {r: 0.175074, g: 0.2190224, b: 0.30132017, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2852,7 +2852,6 @@ GameObject:
   - component: {fileID: 367118539}
   - component: {fileID: 367118538}
   - component: {fileID: 367118537}
-  - component: {fileID: 367118536}
   - component: {fileID: 367118540}
   m_Layer: 0
   m_Name: SwordTrigger
@@ -2953,7 +2952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inUpgradeRange: 0
   player: {fileID: 0}
-  coins: {fileID: 0}
+  coins: {fileID: 7545338630058569027}
   coinPrice: 0
 --- !u!1 &368890596
 GameObject:
@@ -9043,7 +9042,8 @@ MonoBehaviour:
   inTrigger: 0
   playerCoins: 0
   upgradeCoinCost: 0
-  player: {fileID: 542483640}
+  playerGameObject: {fileID: 0}
+  charactercontrols: {fileID: 0}
   coinResources: {fileID: 7545338630058569026}
   coinResourcesScript: {fileID: 7545338630058569027}
 --- !u!1 &1107107470
