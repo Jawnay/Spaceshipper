@@ -14,4 +14,9 @@ public class GameOverScreen : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void ChangeSceneToBuildIndexTwo()
+    {
+        SceneManager.LoadScene(2);
+    }
 }

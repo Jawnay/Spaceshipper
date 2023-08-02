@@ -1200,7 +1200,7 @@ GameObject:
   - component: {fileID: 198254089}
   m_Layer: 5
   m_Name: Upgrade_menu
-  m_TagString: Untagged
+  m_TagString: dialogue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8833,7 +8833,7 @@ GameObject:
   - component: {fileID: 1094931841}
   m_Layer: 5
   m_Name: Upgrade_menu
-  m_TagString: Untagged
+  m_TagString: dialogue2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
