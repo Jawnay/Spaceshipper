@@ -9,7 +9,7 @@ public class AttackHitbox : MonoBehaviour
         if (other.tag == "Player")
         {
             Debug.Log("Player hit with attack.");
-            other.attachedRigidbody.gameObject.GetComponent<player_health>().health -= 15;
+            other.attachedRigidbody.gameObject.GetComponent<PlayerHealth>().health -= 15;
         }
     }
 }
