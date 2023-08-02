@@ -35,4 +35,10 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
 #endif        
     }
+
+    public void OnOptionButton()
+    {
+        SceneManager.LoadScene(5);
+
+    }
 }
