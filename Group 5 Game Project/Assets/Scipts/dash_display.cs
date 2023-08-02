@@ -32,7 +32,7 @@ public class dash_display : MonoBehaviour
         }
 
         UpdateHUD(charactercontrols.maxSpeedBoostCount);
-        
+
     }
 
     // Update is called once per frame
@@ -41,10 +41,10 @@ public class dash_display : MonoBehaviour
         playerGameObject = GameObject.FindGameObjectWithTag("Player");
         CharacterControls charactercontrols = playerGameObject.GetComponent<CharacterControls>();
         UpdateHUD(charactercontrols.maxSpeedBoostCount);
-        
+
     }
 
-    private void UpdateHUD(int value) 
+    private void UpdateHUD(int value)
     {
          Debug.Log("UpdateHUD called with value: " + value);
         GameObject dashesLGameObject = GameObject.FindGameObjectWithTag("dash");
