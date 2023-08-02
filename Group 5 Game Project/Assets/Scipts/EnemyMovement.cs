@@ -176,14 +176,14 @@ public class EnemyMovement : MonoBehaviour
         return false;
     }
 
-    public void TakeDamage()
+    public void TakeDamage(int damage)
     {
         if (!invincible)
         {
             invincible = true;
 
             // Update health
-            stats.health--;
+            stats.health -= damage;
 
             //KnockBack();
 

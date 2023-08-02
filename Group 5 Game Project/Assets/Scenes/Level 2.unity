@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17507389, g: 0.21902215, b: 0.30131987, a: 1}
+  m_IndirectSpecularColor: {r: 0.175074, g: 0.2190224, b: 0.30132017, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2853,6 +2853,7 @@ GameObject:
   - component: {fileID: 367118538}
   - component: {fileID: 367118537}
   - component: {fileID: 367118536}
+  - component: {fileID: 367118540}
   m_Layer: 0
   m_Name: SwordTrigger
   m_TagString: Untagged
@@ -2952,6 +2953,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367118534}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &367118540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367118534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6741d4a9d9f86a74c805c4948bec08aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inUpgradeRange: 0
+  player: {fileID: 0}
+  coins: {fileID: 0}
+  coinPrice: 0
 --- !u!1 &368890596
 GameObject:
   m_ObjectHideFlags: 0
