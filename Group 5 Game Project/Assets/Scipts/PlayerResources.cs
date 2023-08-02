@@ -18,6 +18,7 @@ public class PlayerResources : MonoBehaviour
     [SerializeField] private TextMeshProUGUI yellowOreText;
     [SerializeField] private TextMeshProUGUI orangeOreText;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,5 +34,10 @@ public class PlayerResources : MonoBehaviour
         greenOreText.text = GreenOreValue.ToString();
         yellowOreText.text = YellowOreValue.ToString();
         orangeOreText.text = OrangeOreValue.ToString();
+    }
+    
+    public void OreCollected(string oreType)
+    {
+        FindObjectOfType<RoundManager>().CollectOre(oreType);
     }
 }

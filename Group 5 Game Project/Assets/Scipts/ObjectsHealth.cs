@@ -24,24 +24,24 @@ public class ObjectsHealth : MonoBehaviour
             switch (oreType)
             {
                 case "RedOre":
-                    playerResources.RedOreValue += Random.Range(1, 5);
+                    playerResources.RedOreValue += 1;
                     break;
                 case "BlueOre":
-                    playerResources.BlueOreValue += Random.Range(1, 5);
+                    playerResources.BlueOreValue += 1;
                     break;
                 case "GreenOre":
-                    playerResources.GreenOreValue += Random.Range(1, 5);
+                    playerResources.GreenOreValue += 1;
                     break;
                 case "YellowOre":
-                    playerResources.YellowOreValue += Random.Range(1, 5);
+                    playerResources.YellowOreValue += 1;
                     break;
                 case "OrangeOre":
-                    playerResources.OrangeOreValue += Random.Range(1, 5);
+                    playerResources.OrangeOreValue += 1;
                     break;
                 default:
                     break;
             }
-
+            playerResources.OreCollected(oreType);
             Destroy(gameObject);
         }
     }
