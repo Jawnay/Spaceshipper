@@ -11,7 +11,7 @@ public class dash_display : MonoBehaviour
     {
          playerGameObject = GameObject.FindGameObjectWithTag("Player");
         int charactercontrols = playerGameObject.GetComponent<CharacterControls>().maxSpeedBoostCount;
-        Debug.Log("please update" + charactercontrols);
+        //Debug.Log("please update" + charactercontrols);
         if (charactercontrols == null)
         {
             Debug.LogError("characterControls script not assigned in the Inspector!");
@@ -46,7 +46,7 @@ public class dash_display : MonoBehaviour
 
     private void UpdateHUD(int value) 
     {
-         Debug.Log("UpdateHUD called with value: " + value);
+        //Debug.Log("UpdateHUD called with value: " + value);
         GameObject dashesLGameObject = GameObject.Find("dashes_l");
         if (dashesLGameObject != null)
         {

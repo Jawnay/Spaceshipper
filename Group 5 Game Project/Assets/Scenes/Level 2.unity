@@ -2852,7 +2852,6 @@ GameObject:
   - component: {fileID: 367118539}
   - component: {fileID: 367118538}
   - component: {fileID: 367118537}
-  - component: {fileID: 367118536}
   m_Layer: 0
   m_Name: SwordTrigger
   m_TagString: Untagged
@@ -2875,20 +2874,6 @@ Transform:
   m_Father: {fileID: 1840373373}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &367118536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 367118534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bced7a28ee39914a992ded04905acc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueBox1: {fileID: 1476141795}
-  proximity: 5
 --- !u!65 &367118537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3867,6 +3852,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8125632388333684072, guid: 74fe7eed3ad8ec84bb8770355f363fda, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8125632388429620746, guid: 74fe7eed3ad8ec84bb8770355f363fda, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -6439,6 +6428,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c306bf03de1c0074faff47ccbd274e44, type: 3}
+--- !u!1 &737027685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5819559863180628305, guid: c306bf03de1c0074faff47ccbd274e44, type: 3}
+  m_PrefabInstance: {fileID: 737027684}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &737027686 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5819559863180628304, guid: c306bf03de1c0074faff47ccbd274e44, type: 3}
+  m_PrefabInstance: {fileID: 737027684}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737027685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a565d9c1ff7b3468bf95b0e636b900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &739139529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7255,7 +7260,7 @@ GameObject:
   - component: {fileID: 858382871}
   - component: {fileID: 858382870}
   - component: {fileID: 858382869}
-  - component: {fileID: 858382868}
+  - component: {fileID: 858382872}
   m_Layer: 0
   m_Name: AxeTrigger
   m_TagString: Untagged
@@ -7278,20 +7283,6 @@ Transform:
   m_Father: {fileID: 1840373373}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &858382868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 858382866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5145a9c7411c93047bbd7b13cb4f7037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 1279264173}
-  proximity: 5
 --- !u!65 &858382869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7355,6 +7346,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858382866}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &858382872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858382866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa081018ae1ac04c951c6f0507f48a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inTrigger: 0
+  playerCoins: 0
+  minObjectHealth: 0
+  upgradeCoinCost: 0
+  MiningManager: {fileID: 737027685}
+  miningManagerScript: {fileID: 737027686}
+  coinResources: {fileID: 7545338630058569026}
+  coinResourcesScript: {fileID: 7545338630058569027}
 --- !u!4 &864797241 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4991001240701050, guid: b3d0e1c692a75b34d96fb84c9b431b64, type: 3}
@@ -8416,6 +8427,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8125632388333684072, guid: 74fe7eed3ad8ec84bb8770355f363fda, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8125632388429620746, guid: 74fe7eed3ad8ec84bb8770355f363fda, type: 3}
       propertyPath: m_RootOrder
       value: 34
@@ -8909,7 +8924,6 @@ GameObject:
   - component: {fileID: 1102729356}
   - component: {fileID: 1102729355}
   - component: {fileID: 1102729354}
-  - component: {fileID: 1102729353}
   m_Layer: 0
   m_Name: DashTrigger
   m_TagString: Untagged
@@ -8932,20 +8946,6 @@ Transform:
   m_Father: {fileID: 1840373373}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &1102729353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1102729351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a6504cf1582ccd46b541fda975258a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueBox2: {fileID: 1447679963}
-  proximity: 5
 --- !u!65 &1102729354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11053,7 +11053,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309272401}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1309272404
 Camera:
   m_ObjectHideFlags: 0
@@ -18192,6 +18192,22 @@ PrefabInstance:
       objectReference: {fileID: 853753863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b83f612825ca53459b7288b243b45af, type: 3}
+--- !u!1 &7545338630058569026 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7545338629650255504, guid: 0b83f612825ca53459b7288b243b45af, type: 3}
+  m_PrefabInstance: {fileID: 7545338630058569025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7545338630058569027 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7545338629650255507, guid: 0b83f612825ca53459b7288b243b45af, type: 3}
+  m_PrefabInstance: {fileID: 7545338630058569025}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7545338630058569026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a947e8f95f1cd7d44ac890644f3d6659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8092502614479575175
 PrefabInstance:
   m_ObjectHideFlags: 0
