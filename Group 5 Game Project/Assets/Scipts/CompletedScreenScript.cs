@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class CompletedScreenScript : MonoBehaviour
 {
-    public GameObject panel;
     // Start is called before the first frame update
+    public GameObject panel;
     void Start()
     {
         panel = GameObject.FindGameObjectWithTag("panel");
-        //panel.SetActive(false);
+        panel.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -19,12 +19,14 @@ public class CompletedScreenScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.C)) {
+            panel.SetActive(false);
+        }
     }
 
     public void OnContinueButton()
     {
-        panel.SetActive(false);
+        SceneManager.LoadScene(2);
     }
 
     public void OnMainMenuButton()
