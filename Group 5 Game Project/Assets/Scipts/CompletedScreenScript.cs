@@ -6,9 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class CompletedScreenScript : MonoBehaviour
 {
+    public GameObject panel;
     // Start is called before the first frame update
     void Start()
     {
+        panel = GameObject.FindGameObjectWithTag("panel");
+        //panel.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -21,7 +24,7 @@ public class CompletedScreenScript : MonoBehaviour
 
     public void OnContinueButton()
     {
-        SceneManager.LoadScene(2);
+        panel.SetActive(false);
     }
 
     public void OnMainMenuButton()

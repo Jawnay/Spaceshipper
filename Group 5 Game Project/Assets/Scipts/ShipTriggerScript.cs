@@ -13,9 +13,12 @@ public class ShipTriggerScript : MonoBehaviour
     public bool nextLevel;
     public int matCollected;
     public bool returnShip;
+    public GameObject panel;
     // Start is called before the first frame update
     void Start()
     {
+        panel = GameObject.FindGameObjectWithTag("panel");
+        panel.SetActive(false);
         nextLevel = false;
         isShipDown = false;
         matCollected = 0;
@@ -66,7 +69,7 @@ public class ShipTriggerScript : MonoBehaviour
     private void activateScreen()
     {
         nextLevel = true;
-                SceneManager.LoadScene(4);
+        panel.SetActive(true);
     }
     
 }
