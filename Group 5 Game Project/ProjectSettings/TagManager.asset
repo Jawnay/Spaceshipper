@@ -30,6 +30,7 @@ TagManager:
   - BlueOre
   - Continue
   - Ship
+  - panel
   layers:
   - Default
   - TransparentFX
