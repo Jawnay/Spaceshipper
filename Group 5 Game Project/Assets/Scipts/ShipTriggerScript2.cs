@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ShipTriggerScript : MonoBehaviour
+public class ShipTriggerScript2 : MonoBehaviour
 {
     public Animator ship;
     public GameObject PlayerResources;
@@ -17,6 +17,8 @@ public class ShipTriggerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        panel = GameObject.FindGameObjectWithTag("panel");
+        panel.SetActive(false);
         nextLevel = false;
         isShipDown = false;
         matCollected = 0;
@@ -82,6 +84,10 @@ public class ShipTriggerScript : MonoBehaviour
 
     private void activateScreen()
     {
-        SceneManager.LoadScene(4);
+        panel.SetActive(true);
+        Debug.Log("I have arrived");
+        nextLevel = true;
+        panel = GameObject.FindGameObjectWithTag("panel");
     }
 }
+

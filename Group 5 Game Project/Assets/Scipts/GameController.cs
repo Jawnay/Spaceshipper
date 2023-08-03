@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
         currentLevel = 0;
         Player = GameObject.FindGameObjectWithTag("Player");
         Ship = GameObject.FindGameObjectWithTag("Ship");
-        isNext = Ship.GetComponent<ShipTriggerScript>().nextLevel;
+        isNext = Ship.GetComponent<ShipTriggerScript2>().nextLevel;
         // Initialize rock spawners
         numRocksToSpawn = new int[] {2, 2, 1, 1, 1, 1, 1, 3, 3, 1, 1, 5, 1, 3};
         rockSpawners[0].Init(195f, 213f, 69f, 70f, 63f, 100f);
@@ -49,7 +49,8 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       //isNext = Ship.GetComponent<ShipTriggerScript>().nextLevel;
+    //     Ship = GameObject.FindGameObjectWithTag("Ship");
+    //    isNext = Ship.GetComponent<ShipTriggerScript2>().nextLevel;
         Debug.Log("What is isNext" + isNext);
         if (isNext) {
             currentLevel++;
