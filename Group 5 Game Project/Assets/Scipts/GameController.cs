@@ -49,9 +49,12 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       //isNext = Ship.GetComponent<ShipTriggerScript>().nextLevel;
+        Debug.Log("What is isNext" + isNext);
         if (isNext) {
             currentLevel++;
             if (currentLevel == 1) {
+                Debug.Log("This thing happens");
                 LoadLevel2();
             } else if (currentLevel == 2) {
                 LoadLevel3();
