@@ -76,12 +76,6 @@ public class GameController : MonoBehaviour
         enemySpawner.SpawnBlueEnemies(2);
         enemySpawner.SpawnRedEnemies(1);
 
-        // Wipe rocks and spawn new rocks
-        Debug.Log("Going to the next level");
-       // if (currentLevel == 1) {
-            LoadLevel2();
-        //}
-
     }
 
     void LoadLevel2()
