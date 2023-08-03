@@ -54,7 +54,7 @@ public class MiningManager : MonoBehaviour
             else
             {
                 // Player does not have the pickaxe equipped, so they can't mine.
-                Debug.Log("You need a pickaxe to mine!");
+                // Debug.Log("You need a pickaxe to mine!");
             }
         }
     }
