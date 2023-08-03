@@ -10,16 +10,19 @@ public class GameController : MonoBehaviour
     public int[] numRocksToSpawn;       // Determines how many rocks are spawned at any given location.
     public int numRocksIndex;           // For iterating through numRocksToSpawn
     public bool isNext;
-    //public TimerCountdown timerCountdown;
+    public GameObject Ship;
+    public GameObject Player;
+    public RoundManager roundManager;
+    public TimerCountdown timerCountdown;
 
     // Start is called before the first frame update
     void Start()
     {
-
-        isNext = gameObject.GetComponent<ShipTriggerScript>().nextLevel;
+        Player = GameObject.FindGameObjectWithTag("Player");
+        Ship = GameObject.FindGameObjectWithTag("Ship");
+        isNext = Ship.GetComponent<ShipTriggerScript>().nextLevel;
         // Initialize rock spawners
-        rockSpawners = new RockSpawner[14];
-        numRocksToSpawn = new int[] { 2, 2, 2, 2, 2, 2, 2, 3, 3, 2, 2, 5, 1 };
+        numRocksToSpawn = new int[] {2, 2, 1, 1, 1, 1, 1, 3, 3, 1, 1, 5, 1, 3};
         rockSpawners[0].Init(195f, 213f, 69f, 70f, 63f, 100f);
         rockSpawners[1].Init(360f, 405f, 53f, 54f, 233f, 244f);
         rockSpawners[2].Init(65f, 75f, 27f, 27.5f, 393f, 400f);
@@ -53,9 +56,9 @@ public class GameController : MonoBehaviour
         ResetLevel();
 
         // Prompt
-        GetComponent<RoundManager>().SetRequiredOres(1, 0, 0, 1, 1);
+        roundManager.SetRequiredOres(1, 0, 0, 1, 1);
 
-        gameObject.GetComponent<TimerCountdown>().secondsLeft = 140;
+        timerCountdown.secondsLeft = 140;
         // Spawn enemies
         enemySpawner.SpawnBlueEnemies(2);
         enemySpawner.SpawnRedEnemies(1);
@@ -72,9 +75,9 @@ public class GameController : MonoBehaviour
         // 1r, 1o, 1y, 1b, 1g | 2be, 1re
         ResetLevel();
         // Prompt
-        GetComponent<RoundManager>().SetRequiredOres(1, 1, 1, 1, 1);
+        roundManager.SetRequiredOres(1, 1, 1, 1, 1);
 
-        gameObject.GetComponent<TimerCountdown>().secondsLeft = 160;
+        timerCountdown.secondsLeft = 160;
         // Spawn enemies
         enemySpawner.SpawnBlueEnemies(2);
         enemySpawner.SpawnRedEnemies(1);
@@ -91,10 +94,10 @@ public class GameController : MonoBehaviour
         ResetLevel();
         
         // Prompt
-        GetComponent<RoundManager>().SetRequiredOres(1, 2, 1, 1, 2);
+        roundManager.SetRequiredOres(1, 2, 1, 1, 2);
 
 
-        gameObject.GetComponent<TimerCountdown>().secondsLeft = 180;
+        timerCountdown.secondsLeft = 180;
         // Spawn enemies
         enemySpawner.SpawnBlueEnemies(2);
         enemySpawner.SpawnRedEnemies(2);
@@ -113,10 +116,10 @@ public class GameController : MonoBehaviour
 
         // Prompt
 
-        GetComponent<RoundManager>().SetRequiredOres(2, 2, 1, 2, 1);
+        roundManager.SetRequiredOres(2, 2, 1, 2, 1);
 
 
-        gameObject.GetComponent<TimerCountdown>().secondsLeft = 200;
+        timerCountdown.secondsLeft = 200;
         // Spawn enemies
         enemySpawner.SpawnBlueEnemies(2);
         enemySpawner.SpawnRedEnemies(2);
@@ -131,7 +134,7 @@ public class GameController : MonoBehaviour
 
     void ResetPlayerHealth()
     {
-        gameObject.GetComponent<PlayerHealth>().health = 90;
+        Player.GetComponent<PlayerHealth>().health = 90;
     }
 
     void ResetLevel()
