@@ -84,7 +84,9 @@ public class ShipTriggerScript : MonoBehaviour
 
     private void activateScreen()
     {
-        nextLevel = true;
         panel.SetActive(true);
+        Debug.Log("I have arrived");
+        panel = GameObject.FindGameObjectWithTag("panel");
+        nextLevel = true;
     }
 }

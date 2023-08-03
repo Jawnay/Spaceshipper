@@ -11,7 +11,6 @@ public class CompletedScreenScript : MonoBehaviour
     void Start()
     {
         panel = GameObject.FindGameObjectWithTag("panel");
-        panel.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
