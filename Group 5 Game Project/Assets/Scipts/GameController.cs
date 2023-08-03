@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour
     public int[] numRocksToSpawn;       // Determines how many rocks are spawned at any given location.
     public int numRocksIndex;           // For iterating through numRocksToSpawn
     public bool isNext;
-    public GameObject Ship;
+    public GameObject ship;
     public GameObject Player;
     public RoundManager roundManager;
     public TimerCountdown timerCountdown;
@@ -21,8 +21,8 @@ public class GameController : MonoBehaviour
     {
         currentLevel = 0;
         Player = GameObject.FindGameObjectWithTag("Player");
-        Ship = GameObject.FindGameObjectWithTag("Ship");
-        isNext = Ship.GetComponent<ShipTriggerScript2>().nextLevel;
+        ship = GameObject.FindGameObjectWithTag("Ship");
+        isNext = ship.GetComponent<ShipTriggerScript2>().nextLevel;
         // Initialize rock spawners
         numRocksToSpawn = new int[] {2, 2, 1, 1, 1, 1, 1, 3, 3, 1, 1, 5, 1, 3};
         rockSpawners[0].Init(195f, 213f, 69f, 70f, 63f, 100f);
@@ -49,20 +49,23 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    //     Ship = GameObject.FindGameObjectWithTag("Ship");
-    //    isNext = Ship.GetComponent<ShipTriggerScript2>().nextLevel;
+        ship = GameObject.FindGameObjectWithTag("Ship");
+       isNext = ship.GetComponent<ShipTriggerScript2>().nextLevel;
+       Debug.Log("here");
         Debug.Log("What is isNext" + isNext);
         if (isNext) {
-            currentLevel++;
-            if (currentLevel == 1) {
-                Debug.Log("This thing happens");
-                LoadLevel2();
-            } else if (currentLevel == 2) {
-                LoadLevel3();
-            } else if (currentLevel == 3) {
-                LoadLevel4();
-            }
             isNext = false;
+            Debug.Log("here1");
+            currentLevel++;
+            Debug.Log("What is Level" + currentLevel);
+            // if (currentLevel == 1) {
+            //     Debug.Log("This thing happens");
+            //   //  LoadLevel2();
+            // } else if (currentLevel == 2) {
+            //     LoadLevel3();
+            // } else if (currentLevel == 3) {
+            //     LoadLevel4();
+            // }
         }
         
     }
@@ -85,8 +88,8 @@ public class GameController : MonoBehaviour
     void LoadLevel2()
     {
         // 1r, 1o, 1y, 1b, 1g | 2be, 1re
-        isNext = false;
-        ResetLevel();
+        //isNext = false;
+        //ResetLevel();
         // Prompt
         roundManager.SetRequiredOres(1, 1, 1, 1, 1);
 
