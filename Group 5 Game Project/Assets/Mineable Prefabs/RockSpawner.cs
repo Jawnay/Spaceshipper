@@ -15,7 +15,7 @@ public class RockSpawner : MonoBehaviour
     public float minZ;// = -10f;
     public float maxZ;// = 10f;
 
-    void Init(float minX,float maxX, float minY, float maxY, float minZ, float maxZ){
+    public void Init(float minX,float maxX, float minY, float maxY, float minZ, float maxZ){
         this.minX = minX;
         this.maxX = maxX;
         this.minX = minX;
@@ -24,7 +24,7 @@ public class RockSpawner : MonoBehaviour
         this.maxZ = maxZ;
     }
 
-    void SpawnRocks(int numRocks)
+    public void SpawnRocks(int numRocks)
     {
         if (rockPrefabs.Length == 0)
         {
@@ -48,7 +48,7 @@ public class RockSpawner : MonoBehaviour
         }
     }
 
-    void WipeRocks()
+    public void WipeRocks()
     {
     while (transform.childCount > 0)
         {
