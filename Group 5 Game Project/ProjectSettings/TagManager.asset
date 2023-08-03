@@ -28,6 +28,7 @@ TagManager:
   - OrangeOre
   - GreenOre
   - BlueOre
+  - Continue
   layers:
   - Default
   - TransparentFX
