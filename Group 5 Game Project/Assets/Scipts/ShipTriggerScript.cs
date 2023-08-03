@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ShipTriggerScript : MonoBehaviour
-{    
+{
     public Animator ship;
     public GameObject PlayerResources;
     public PlayerResources playerResourcesScript;
@@ -13,6 +13,7 @@ public class ShipTriggerScript : MonoBehaviour
     public bool nextLevel;
     public int matCollected;
     public bool returnShip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,7 @@ public class ShipTriggerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!isShipDown)
+        if (!isShipDown)
         {
             ship.SetBool("lowerShip", true);
             isShipDown = true;
@@ -39,9 +40,22 @@ public class ShipTriggerScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("In trigger");
             playerResourcesScript = PlayerResources.GetComponent<PlayerResources>();
-            //matCollected = playerResourcesScript.value;
+
+            // Check if the PlayerResources script is found before accessing its variables
+            if (playerResourcesScript != null)
+            {
+                matCollected = playerResourcesScript.RedOreValue +
+                               playerResourcesScript.BlueOreValue +
+                               playerResourcesScript.GreenOreValue +
+                               playerResourcesScript.YellowOreValue +
+                               playerResourcesScript.OrangeOreValue;
+            }
+            else
+            {
+                Debug.LogWarning("PlayerResources script not found on the PlayerResources GameObject.");
+            }
+
             hasRocks();
         }
     }
@@ -50,9 +64,9 @@ public class ShipTriggerScript : MonoBehaviour
     // and does all necessary things to "end" the level.
     private void hasRocks()
     {
-        if(matCollected >= rocksNeeded)
+        if (matCollected >= rocksNeeded)
         {
-            if(isShipDown)
+            if (isShipDown)
             {
                 Debug.Log("Has Rocks!");
                 ship.SetBool("returnShip", true);
@@ -60,13 +74,17 @@ public class ShipTriggerScript : MonoBehaviour
                 Invoke(nameof(activateScreen), 3f);
             }
         }
-        Debug.Log("Collect all rocks needed!");
+        else
+        {
+            Debug.Log("Collect all rocks needed!");
+        }
     }
 
     private void activateScreen()
     {
         nextLevel = true;
-                SceneManager.LoadScene(4);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        
+        //SceneManager.LoadScene(4);
     }
-    
 }
