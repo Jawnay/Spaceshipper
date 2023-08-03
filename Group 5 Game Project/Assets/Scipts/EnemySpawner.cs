@@ -14,23 +14,27 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         nextSpawnPoint = 0;
-        SpawnBlueEnemies(1);
-        SpawnRedEnemies(2);
+        //SpawnBlueEnemies(1);
+        //SpawnRedEnemies(2);
     }
 
     public void SpawnBlueEnemies(int howMany)
     {
         // Case for maxing out # of spawnPoints
-        if (howMany > spawnPoints.Length)
+        if (howMany > spawnPoints.Length - 1)
         {
-            howMany = spawnPoints.Length;
+            howMany = spawnPoints.Length - 1;
         }
 
         for (int i = 0; i < howMany; i++)
         {
+            Debug.Log(nextSpawnPoint);
             UnityEngine.AI.NavMeshHit spawn = GenerateSpawnFromPoint(spawnPoints[nextSpawnPoint]);
             GameObject newEnemy = Instantiate(blueEnemy, spawn.position, spawnPoints[nextSpawnPoint].rotation);
             nextSpawnPoint++;
+            if(nextSpawnPoint == spawnPoints.Length){
+                nextSpawnPoint = 0;
+            }
         }
     }
 

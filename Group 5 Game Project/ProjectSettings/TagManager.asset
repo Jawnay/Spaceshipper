@@ -29,6 +29,7 @@ TagManager:
   - GreenOre
   - BlueOre
   - Continue
+  - Ship
   layers:
   - Default
   - TransparentFX
