@@ -51,6 +51,9 @@ public class GameController : MonoBehaviour
         // 1r, 0o, 0y, 1b, 1g | 2be, 1re
         ResetLevel();
 
+        // Prompt
+        GetComponent<RoundManager>().SetRequiredOres(1, 0, 0, 1, 1);
+
         gameObject.GetComponent<TimerCountdown>().secondsLeft = 140;
         // Spawn enemies
         enemySpawner.SpawnBlueEnemies(2);
@@ -67,7 +70,9 @@ public class GameController : MonoBehaviour
     {
         // 1r, 1o, 1y, 1b, 1g | 2be, 1re
         ResetLevel();
-        
+        // Prompt
+        GetComponent<RoundManager>().SetRequiredOres(1, 1, 1, 1, 1);
+
         gameObject.GetComponent<TimerCountdown>().secondsLeft = 160;
         // Spawn enemies
         enemySpawner.SpawnBlueEnemies(2);
@@ -84,6 +89,10 @@ public class GameController : MonoBehaviour
         // 1r, 2o, 1y, 1b, 2g | 2be, 2re
         ResetLevel();
         
+        // Prompt
+        GetComponent<RoundManager>().SetRequiredOres(1, 2, 1, 1, 2);
+
+
         gameObject.GetComponent<TimerCountdown>().secondsLeft = 180;
         // Spawn enemies
         enemySpawner.SpawnBlueEnemies(2);
@@ -100,6 +109,12 @@ public class GameController : MonoBehaviour
     {
         ResetLevel();
         // 2r, 2o, 1y, 2b, 1g | 2be, 2re
+
+        // Prompt
+
+        GetComponent<RoundManager>().SetRequiredOres(2, 2, 1, 2, 1);
+
+
         gameObject.GetComponent<TimerCountdown>().secondsLeft = 200;
         // Spawn enemies
         enemySpawner.SpawnBlueEnemies(2);
