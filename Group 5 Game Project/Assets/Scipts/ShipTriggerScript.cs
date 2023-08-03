@@ -10,11 +10,13 @@ public class ShipTriggerScript : MonoBehaviour
     public PlayerResources playerResourcesScript;
     public int rocksNeeded = 2;
     public bool isShipDown;
+    public bool nextLevel;
     public int matCollected;
     public bool returnShip;
     // Start is called before the first frame update
     void Start()
     {
+        nextLevel = false;
         isShipDown = false;
         matCollected = 0;
         ship.SetBool("lowerShip", false);
@@ -63,6 +65,7 @@ public class ShipTriggerScript : MonoBehaviour
 
     private void activateScreen()
     {
+        nextLevel = true;
                 SceneManager.LoadScene(4);
     }
     
