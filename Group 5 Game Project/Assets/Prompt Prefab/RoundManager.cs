@@ -81,6 +81,18 @@ public class RoundManager : MonoBehaviour
         }
     }
 
+    public void SetRequiredOres(int red, int orange, int yellow, int green, int blue)
+    {
+        requiredRedOre = red;
+        requiredOrangeOre = orange;
+        requiredYellowOre = yellow;
+        requiredGreenOre = green;
+        requiredBlueOre = blue;
+
+
+        // Update the round prompt text with the new required amounts
+        UpdateRoundPromptText();
+    }
     private void UpdateRoundPromptText()
     {
         // Update the round prompt text with the remaining ores to collect
