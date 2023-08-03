@@ -14,10 +14,12 @@ public class GameController : MonoBehaviour
     public GameObject Player;
     public RoundManager roundManager;
     public TimerCountdown timerCountdown;
+    public int currentLevel;
 
     // Start is called before the first frame update
     void Start()
     {
+        currentLevel = 0;
         Player = GameObject.FindGameObjectWithTag("Player");
         Ship = GameObject.FindGameObjectWithTag("Ship");
         isNext = Ship.GetComponent<ShipTriggerScript>().nextLevel;
@@ -47,6 +49,17 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isNext) {
+            currentLevel++;
+            if (currentLevel == 1) {
+                LoadLevel2();
+            } else if (currentLevel == 2) {
+                LoadLevel3();
+            } else if (currentLevel == 3) {
+                LoadLevel4();
+            }
+            isNext = false;
+        }
         
     }
 
@@ -64,15 +77,17 @@ public class GameController : MonoBehaviour
         enemySpawner.SpawnRedEnemies(1);
 
         // Wipe rocks and spawn new rocks
-        if (isNext) {
+        Debug.Log("Going to the next level");
+       // if (currentLevel == 1) {
             LoadLevel2();
-        }
+        //}
 
     }
 
     void LoadLevel2()
     {
         // 1r, 1o, 1y, 1b, 1g | 2be, 1re
+        isNext = false;
         ResetLevel();
         // Prompt
         roundManager.SetRequiredOres(1, 1, 1, 1, 1);
@@ -90,6 +105,7 @@ public class GameController : MonoBehaviour
 
     void LoadLevel3()
     {
+        isNext = false;
         // 1r, 2o, 1y, 1b, 2g | 2be, 2re
         ResetLevel();
         
@@ -111,6 +127,7 @@ public class GameController : MonoBehaviour
 
     void LoadLevel4()
     {
+        isNext = false;
         ResetLevel();
         // 2r, 2o, 1y, 2b, 1g | 2be, 2re
 
