@@ -5,26 +5,26 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public Transform[] spawnPoints;
+    int nextSpawnPoint;
+
     public GameObject blueEnemy; // Blue enemy prefab
     public GameObject redEnemy;  // Red enemy prefab
-
-    int nextSpawnPoint;
 
     // Start is called before the first frame update
     void Start()
     {
         nextSpawnPoint = 0;
-        //SpawnBlueEnemies(1);
-        //SpawnRedEnemies(2);
+        // SpawnBlueEnemies(2);
+        // SpawnRedEnemies(1);
     }
 
     public void SpawnBlueEnemies(int howMany)
     {
         // Case for maxing out # of spawnPoints
-        if (howMany > spawnPoints.Length - 1)
-        {
-            howMany = spawnPoints.Length - 1;
-        }
+        // if (howMany > spawnPoints.Length - 1)
+        // {
+        //     howMany = spawnPoints.Length - 1;
+        // }
 
         for (int i = 0; i < howMany; i++)
         {
@@ -32,7 +32,8 @@ public class EnemySpawner : MonoBehaviour
             UnityEngine.AI.NavMeshHit spawn = GenerateSpawnFromPoint(spawnPoints[nextSpawnPoint]);
             GameObject newEnemy = Instantiate(blueEnemy, spawn.position, spawnPoints[nextSpawnPoint].rotation);
             nextSpawnPoint++;
-            if(nextSpawnPoint == spawnPoints.Length){
+            if (nextSpawnPoint == spawnPoints.Length)
+            {
                 nextSpawnPoint = 0;
             }
         }
@@ -41,16 +42,20 @@ public class EnemySpawner : MonoBehaviour
     public void SpawnRedEnemies(int howMany)
     {
         // Case for maxing out # of spawnPoints
-        if (howMany > spawnPoints.Length)
-        {
-            howMany = spawnPoints.Length;
-        }
+        // if (howMany > spawnPoints.Length - 1)
+        // {
+        //     howMany = spawnPoints.Length - 1;
+        // }
 
         for (int i = 0; i < howMany; i++)
         {
             UnityEngine.AI.NavMeshHit spawn = GenerateSpawnFromPoint(spawnPoints[nextSpawnPoint]);
             GameObject newEnemy = Instantiate(redEnemy, spawn.position, spawnPoints[nextSpawnPoint].rotation);
             nextSpawnPoint++;
+            if (nextSpawnPoint == spawnPoints.Length)
+            {
+                nextSpawnPoint = 0;
+            }
         }
     }
 
