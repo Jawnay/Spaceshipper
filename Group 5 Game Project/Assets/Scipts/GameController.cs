@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         isNext = gameObject.GetComponent<ShipTriggerScript>().nextLevel;
         // Initialize rock spawners
         rockSpawners = new RockSpawner[14];
@@ -131,7 +132,6 @@ public class GameController : MonoBehaviour
     void ResetPlayerHealth()
     {
         gameObject.GetComponent<PlayerHealth>().health = 90;
-
     }
 
     void ResetLevel()
