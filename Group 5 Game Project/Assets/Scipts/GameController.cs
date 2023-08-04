@@ -156,9 +156,9 @@ public class GameController : MonoBehaviour
         numRocksIndex = 0;
         foreach (RockSpawner rs in rockSpawners)
         {
-            //rs.WipeRocks();
-            //rs.SpawnRocks(numRocksToSpawn[numRocksIndex]);
-           // numRocksIndex++;
+            rs.WipeRocks();
+            rs.SpawnRocks(numRocksToSpawn[numRocksIndex]);
+            numRocksIndex++;
         }
 
         ResetPlayerHealth();   

@@ -50,10 +50,9 @@ public class RockSpawner : MonoBehaviour
 
     public void WipeRocks()
     {
-    while (transform.childCount > 0)
-        {
-        Destroy(transform.GetChild(0));
-        }
+    foreach (Transform child in transform) {
+        Destroy(child.gameObject);
+    }
     }
 
 

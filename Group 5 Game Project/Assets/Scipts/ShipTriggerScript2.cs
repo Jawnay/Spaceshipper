@@ -8,6 +8,8 @@ public class ShipTriggerScript2 : MonoBehaviour
     public Animator ship;
     public GameObject PlayerResources;
     public PlayerResources playerResourcesScript;
+    public GameObject RoundManager;
+    public RoundManager roundManagerScript;
     public int rocksNeeded = 2;
     public bool isShipDown;
     public int nextLevel;
@@ -66,7 +68,11 @@ public class ShipTriggerScript2 : MonoBehaviour
     // and does all necessary things to "end" the level.
     private void hasRocks()
     {
-        if (matCollected >= rocksNeeded)
+        if(playerResourcesScript.RedOreValue == roundManagerScript.requiredRedOre &&
+            playerResourcesScript.BlueOreValue == roundManagerScript.requiredBlueOre &&
+            playerResourcesScript.GreenOreValue == roundManagerScript.requiredGreenOre &&
+            playerResourcesScript.YellowOreValue == roundManagerScript.requiredYellowOre &&
+            playerResourcesScript.OrangeOreValue == roundManagerScript.requiredOrangeOre) 
         {
             if (isShipDown)
             {
