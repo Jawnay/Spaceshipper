@@ -18,7 +18,7 @@ public class RockSpawner : MonoBehaviour
     public void Init(float minX,float maxX, float minY, float maxY, float minZ, float maxZ){
         this.minX = minX;
         this.maxX = maxX;
-        this.minX = minX;
+        this.minY = minY;
         this.maxY = maxY;
         this.minZ = minZ;
         this.maxZ = maxZ;
