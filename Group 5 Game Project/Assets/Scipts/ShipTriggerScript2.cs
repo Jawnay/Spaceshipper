@@ -80,6 +80,12 @@ public class ShipTriggerScript2 : MonoBehaviour
                 ship.SetBool("returnShip", true);
                 isShipDown = false;
                 Invoke(nameof(activateScreen), 3f);
+                // Subtract required ore amount
+                FindObjectOfType<PlayerResources>().RedOreValue -= roundManagerScript.requiredRedOre;
+                FindObjectOfType<PlayerResources>().BlueOreValue -= roundManagerScript.requiredBlueOre;
+                FindObjectOfType<PlayerResources>().GreenOreValue -= roundManagerScript.requiredGreenOre;
+                FindObjectOfType<PlayerResources>().YellowOreValue -= roundManagerScript.requiredYellowOre;
+                FindObjectOfType<PlayerResources>().OrangeOreValue -= roundManagerScript.requiredOrangeOre;
             }
         }
         else

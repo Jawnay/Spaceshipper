@@ -42,6 +42,13 @@ public class RoundManager : MonoBehaviour
         miningManager.SetActive(false); // Deactivate the MiningManager to prevent further mining
         roundActive = false;
         // Perform any other actions to end the round or start a new one
+        
+        // Subtract the required ore amounts from player resources
+        playerResources.RedOreValue -= requiredRedOre;
+        playerResources.BlueOreValue -= requiredBlueOre;
+        playerResources.GreenOreValue -= requiredGreenOre;
+        playerResources.YellowOreValue -= requiredYellowOre;
+        playerResources.OrangeOreValue -= requiredOrangeOre;
     }
 
     public void CollectOre(string oreType)
