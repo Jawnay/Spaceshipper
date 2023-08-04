@@ -1051,7 +1051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3861690560377217940, guid: f023b407e12dc8b41bb241e776b15c9d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3861690560377217941, guid: f023b407e12dc8b41bb241e776b15c9d, type: 3}
       propertyPath: miningManager
@@ -1067,11 +1067,11 @@ PrefabInstance:
       objectReference: {fileID: 1528048287}
     - target: {fileID: 3861690560377217941, guid: f023b407e12dc8b41bb241e776b15c9d, type: 3}
       propertyPath: requiredBlueOre
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3861690560377217941, guid: f023b407e12dc8b41bb241e776b15c9d, type: 3}
       propertyPath: requiredGreenOre
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3861690560377217941, guid: f023b407e12dc8b41bb241e776b15c9d, type: 3}
       propertyPath: requiredOrangeOre
