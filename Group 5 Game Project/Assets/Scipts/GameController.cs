@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
         ship = GameObject.FindGameObjectWithTag("Ship");
         isNext = ship.GetComponent<ShipTriggerScript2>().nextLevel;
         // Initialize rock spawners
-        numRocksToSpawn = new int[] {2, 2, 1, 1, 1, 1, 1, 3, 3, 1, 1, 5, 1, 3};
+        numRocksToSpawn = new int[] {2, 2, 2, 2, 2, 2, 2, 3, 3, 2, 2, 5, 2, 3};
         rockSpawners[0].Init(195f, 213f, 69f, 70f, 63f, 100f);
         rockSpawners[1].Init(360f, 405f, 53f, 54f, 233f, 244f);
         rockSpawners[2].Init(65f, 75f, 27f, 27.5f, 393f, 400f);
@@ -67,8 +67,12 @@ public class GameController : MonoBehaviour
                 LoadLevel3();
             } else if (isNext == 3 && completedLevel == 3) {
                 LoadLevel4();
+            } else if (isNext == 4 && completedLevel == 4){
+                SceneManager.LoadScene(6);
             }
+
         }
+
         
     }
 
@@ -138,10 +142,7 @@ public class GameController : MonoBehaviour
         enemySpawner.SpawnRedEnemies(2);
 
         // Wipe rocks and spawn new rocks
-        if (isNext == 4) {
-            // Load a you win canvas
-            SceneManager.LoadScene(6);
-        }
+
         
     }
 
