@@ -30,7 +30,7 @@ public class DashUpgradeScript : MonoBehaviour
     void Start()
     {
         inTrigger = false;
-        upgradeCoinCost = 10;
+        upgradeCoinCost = 3;
     }
 
     // Update is called once per frame
