@@ -32,17 +32,17 @@ public class Dialogue_appearS : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-                int swordCost = swordUpgrade.coinPrice; // Get the current axe cost
-                //Debug.Log("in here");
-                Debug.Log("my cost" + swordCost);
-                if (swordCost == 5) {
-                    dialogueBox1.SetActive(true);
-                } else if (swordCost == 9) {
-                    dialogueBoxS2.SetActive(true);
-                } else if (swordCost == 13) {
-                    dialogueBoxS3.SetActive(true);
-                } else {
-                    dialogueBoxS4.SetActive(true);
+            int swordCost = swordUpgrade.coinPrice; // Get the current axe cost
+            //Debug.Log("in here");
+            Debug.Log("my cost" + swordCost);
+            if (swordCost == 5) {
+                dialogueBox1.SetActive(true);
+            } else if (swordCost == 9) {
+                dialogueBoxS2.SetActive(true);
+            } else if (swordCost == 13) {
+                dialogueBoxS3.SetActive(true);
+            } else {
+                dialogueBoxS4.SetActive(true);
                 }
            // }
         }

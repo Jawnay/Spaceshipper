@@ -2690,6 +2690,69 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 313951460}
   m_CullTransparentMesh: 1
+--- !u!1 &315809183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 315809184}
+  - component: {fileID: 315809186}
+  - component: {fileID: 315809185}
+  m_Layer: 0
+  m_Name: STrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &315809184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315809183}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.63, y: 0, z: 18.78}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 772097723}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &315809185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315809183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bced7a28ee39914a992ded04905acc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox1: {fileID: 0}
+  dialogueBoxS2: {fileID: 0}
+  dialogueBoxS3: {fileID: 0}
+  dialogueBoxS4: {fileID: 0}
+  proximity: 5
+--- !u!65 &315809186
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315809183}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.256281, y: 4.9139223, z: 9.726849}
+  m_Center: {x: 0.31397936, y: 1.9569612, z: -0.35370544}
 --- !u!1001 &324382328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2964,9 +3027,9 @@ MonoBehaviour:
     Press Z to Upgrade this item
 
     Cost:
-    10 Coins
+    3 Coins
 
-    Increases number of Dashes per round from 3 to 4'
+    Gain a dash'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7853,6 +7916,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1863717009191007017, guid: 17eccaaf4fc4b460bbfe80bacb3bc357, type: 3}
   m_PrefabInstance: {fileID: 771955647}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &772097723 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9194986829826301030, guid: 6c4666854e9d65b4a9d1f9e20bf9afc6, type: 3}
+  m_PrefabInstance: {fileID: 1771968930}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &790197006
 GameObject:
@@ -14937,7 +15005,7 @@ PrefabInstance:
 
         Cost: 9 coins
 
-        will take two less hits to kill enemies'
+        will take one less hit to kill enemies'
       objectReference: {fileID: 0}
     - target: {fileID: 5652667403050581873, guid: 2a76177dfd5e8b54aa487ac8c170e475, type: 3}
       propertyPath: m_fontSize
@@ -16946,7 +17014,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765439772}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1bced7a28ee39914a992ded04905acc7, type: 3}
   m_Name: 
@@ -17232,23 +17300,23 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2a8234130e7aeb8488b60a145af9e858, type: 2}
     - target: {fileID: 9194986829703074996, guid: 6c4666854e9d65b4a9d1f9e20bf9afc6, type: 3}
       propertyPath: m_Size.x
-      value: 2.1011224
+      value: 1.0619307
       objectReference: {fileID: 0}
     - target: {fileID: 9194986829703074996, guid: 6c4666854e9d65b4a9d1f9e20bf9afc6, type: 3}
       propertyPath: m_Size.z
-      value: 2.0143895
+      value: 0.95736647
       objectReference: {fileID: 0}
     - target: {fileID: 9194986829703074996, guid: 6c4666854e9d65b4a9d1f9e20bf9afc6, type: 3}
       propertyPath: m_Center.x
-      value: -0.017507013
+      value: -0.040791404
       objectReference: {fileID: 0}
     - target: {fileID: 9194986829703074996, guid: 6c4666854e9d65b4a9d1f9e20bf9afc6, type: 3}
       propertyPath: m_Center.y
-      value: -4.915078e-17
+      value: -2.422428e-16
       objectReference: {fileID: 0}
     - target: {fileID: 9194986829703074996, guid: 6c4666854e9d65b4a9d1f9e20bf9afc6, type: 3}
       propertyPath: m_Center.z
-      value: 0.1732515
+      value: -0.0017827437
       objectReference: {fileID: 0}
     - target: {fileID: 9194986829703074996, guid: 6c4666854e9d65b4a9d1f9e20bf9afc6, type: 3}
       propertyPath: m_IsTrigger
@@ -20322,7 +20390,7 @@ PrefabInstance:
 
         Cost: 13 coins
 
-        will take two less hits to kill enemies'
+        will take one less hits to kill enemies'
       objectReference: {fileID: 0}
     - target: {fileID: 5652667403050581873, guid: 2a76177dfd5e8b54aa487ac8c170e475, type: 3}
       propertyPath: m_fontSize
