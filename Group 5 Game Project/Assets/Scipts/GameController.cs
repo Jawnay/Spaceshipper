@@ -84,7 +84,7 @@ public class GameController : MonoBehaviour
         // Prompt
         roundManager.SetRequiredOres(1, 0, 0, 1, 1);
 
-        timerCountdown.secondsLeft = 140;
+        timerCountdown.secondsLeft = 100;
         // Spawn enemies
         enemySpawner.SpawnBlueEnemies(2);
         enemySpawner.SpawnRedEnemies(1);
@@ -99,7 +99,7 @@ public class GameController : MonoBehaviour
         // Prompt
         roundManager.SetRequiredOres(1, 1, 1, 1, 1);
 
-        timerCountdown.secondsLeft = 160;
+        timerCountdown.secondsLeft = 140;
         // Spawn enemies
         enemySpawner.SpawnBlueEnemies(2);
         enemySpawner.SpawnRedEnemies(1);
