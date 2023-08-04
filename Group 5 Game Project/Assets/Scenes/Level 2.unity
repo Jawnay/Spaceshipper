@@ -4046,6 +4046,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74fe7eed3ad8ec84bb8770355f363fda, type: 3}
+--- !u!1 &458363621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3861690560377217940, guid: f023b407e12dc8b41bb241e776b15c9d, type: 3}
+  m_PrefabInstance: {fileID: 1948190955}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &468835561 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9194986829665360435, guid: 6c4666854e9d65b4a9d1f9e20bf9afc6, type: 3}
@@ -6251,6 +6256,8 @@ MonoBehaviour:
   ship: {fileID: 520611249}
   PlayerResources: {fileID: 670988282}
   playerResourcesScript: {fileID: 1126712839}
+  RoundManager: {fileID: 458363621}
+  roundManagerScript: {fileID: 1354316305}
   rocksNeeded: 2
   isShipDown: 0
   nextLevel: 0
@@ -12353,7 +12360,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3861690560377217941, guid: f023b407e12dc8b41bb241e776b15c9d, type: 3}
   m_PrefabInstance: {fileID: 1948190955}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 458363621}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e8fc3b2d9652374990d40e687a19c1b, type: 3}
