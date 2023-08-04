@@ -58,7 +58,7 @@ public class DashUpgradeScript : MonoBehaviour
             {
                 Debug.Log("Upgrading dash");
                 charactercontrols.maxSpeedBoostCount = charactercontrols.maxSpeedBoostCount + 1; 
-                upgradeCoinCost = upgradeCoinCost * 2;
+                coinResourcesScript.value = coinResourcesScript.value - upgradeCoinCost;
             } else {
                 Debug.Log("You have reached the maximum upgrade level for num dashes");
             }
