@@ -37,6 +37,11 @@ TagManager:
   - Axe
   - dialogueP4
   - dialogueP
+  - Sword
+  - dialogueS2
+  - dialogueS3
+  - dialogueS4
+  - dialogueS
   layers:
   - Default
   - TransparentFX

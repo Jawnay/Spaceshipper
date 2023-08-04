@@ -61,8 +61,8 @@ public class AxeUpgradeScript : MonoBehaviour
             miningManagerScript = MiningManager.GetComponent<MiningManager>();
             if(miningManagerScript.damage <= minObjectHealth)
             {
-                miningManagerScript.damage = miningManagerScript.damage + 20;
-                coinResourcesScript.value = coinResourcesScript.value - playerCoins;
+                miningManagerScript.damage = miningManagerScript.damage + 5;
+                coinResourcesScript.value = coinResourcesScript.value - upgradeCoinCost;
                 upgradeCoinCost+=2;
 
             } else {

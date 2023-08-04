@@ -26,12 +26,15 @@ public class SwordUpgrade : MonoBehaviour
             player.transform.GetChild(2).gameObject.SetActive(false);
 
             coins.value -= coinPrice;
-            coinPrice += 2;
+            coinPrice += 4;
         }
     }
 
     bool CanAfford()
     {
+        if (coinPrice > 13) {
+            return false;
+        }
         if (coins.value > coinPrice)
         {
             return true;
