@@ -8,8 +8,16 @@ public class AttackHitbox : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            //Debug.Log("Player hit with attack.");
+            //other.gameObject.GetComponent<PlayerHealth>().health -= 15;
+            
             Debug.Log("Player hit with attack.");
-            other.gameObject.GetComponent<PlayerHealth>().health -= 15;
+            PlayerHealth playerHealth = other.gameObject.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.health -= 15;
+            }
+            
         }
     }
 }

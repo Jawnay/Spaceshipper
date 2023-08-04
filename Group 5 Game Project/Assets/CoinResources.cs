@@ -10,7 +10,7 @@ public class CoinResources : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        UpdateText();
     }
 
     // Update is called once per frame
@@ -18,4 +18,16 @@ public class CoinResources : MonoBehaviour
     {
         text.text = value.ToString();
     }
+
+    public void AddCoins(int amount)
+    {
+        value += amount;
+        UpdateText();
+    }
+
+    private void UpdateText()
+    {
+        text.text = value.ToString();
+    }
+
 }
