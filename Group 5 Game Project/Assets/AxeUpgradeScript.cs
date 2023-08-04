@@ -31,7 +31,7 @@ public class AxeUpgradeScript : MonoBehaviour
     void Start()
     {
         inTrigger = false;
-        upgradeCoinCost = 10;
+        upgradeCoinCost = 5;
         minObjectHealth = 100;
     }
 
