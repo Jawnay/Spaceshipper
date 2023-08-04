@@ -17,8 +17,8 @@ public class ShipTriggerScript2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // panel = GameObject.FindGameObjectWithTag("panel");
-        // panel.SetActive(false);
+        panel = GameObject.FindGameObjectWithTag("panel");
+        panel.SetActive(false);
         nextLevel = 0;
         isShipDown = false;
         matCollected = 0;
@@ -84,11 +84,17 @@ public class ShipTriggerScript2 : MonoBehaviour
 
     private void activateScreen()
     {
+       // panel = GameObject.FindGameObjectWithTag("panel");
         //panel.SetActive(true);
+        panel.SetActive(true);
+        Invoke("panelSet", 5f);
         // Debug.Log("I have arrived");
         nextLevel++;
         reset();
-        // panel = GameObject.FindGameObjectWithTag("panel");
+    }
+
+    void panelSet() {
+        panel.SetActive(false);
     }
 
     void reset() {
