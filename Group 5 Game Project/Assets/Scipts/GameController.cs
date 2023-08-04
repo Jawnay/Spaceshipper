@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
         ship = GameObject.FindGameObjectWithTag("Ship");
         isNext = ship.GetComponent<ShipTriggerScript2>().nextLevel;
         // Initialize rock spawners
-        numRocksToSpawn = new int[] {2, 2, 2, 2, 2, 2, 2, 3, 3, 2, 2, 5, 2, 3};
+        numRocksToSpawn = new int[] {3, 2, 3, 2, 3, 2, 2, 3, 4, 2, 3, 5, 2, 3};
         rockSpawners[0].Init(195f, 213f, 69f, 70f, 63f, 100f);
         rockSpawners[1].Init(360f, 405f, 53f, 54f, 233f, 244f);
         rockSpawners[2].Init(65f, 75f, 27f, 27.5f, 393f, 400f);
