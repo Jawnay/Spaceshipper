@@ -10815,6 +10815,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox1: {fileID: 735037200}
+  dialogueBoxS2: {fileID: 0}
+  dialogueBoxS3: {fileID: 0}
+  dialogueBoxS4: {fileID: 0}
   proximity: 5
 --- !u!65 &1087072547
 BoxCollider:
@@ -12293,7 +12296,7 @@ Terrain:
   m_DrawTreesAndFoliage: 1
   m_StaticShadowCaster: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_MaterialTemplate: {fileID: 2100000, guid: 474f0e87721a52b4b9616d6d748ac58c, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
@@ -14115,6 +14118,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox1: {fileID: 1594326232}
+  dialogueBoxS2: {fileID: 0}
+  dialogueBoxS3: {fileID: 0}
+  dialogueBoxS4: {fileID: 0}
   proximity: 5
 --- !u!65 &1334270504
 BoxCollider:
@@ -17321,6 +17327,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox1: {fileID: 1560369255}
+  dialogueBoxS2: {fileID: 0}
+  dialogueBoxS3: {fileID: 0}
+  dialogueBoxS4: {fileID: 0}
   proximity: 5
 --- !u!65 &1571427711
 BoxCollider:
@@ -18592,6 +18601,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox1: {fileID: 1180835051}
+  dialogueBoxS2: {fileID: 0}
+  dialogueBoxS3: {fileID: 0}
+  dialogueBoxS4: {fileID: 0}
   proximity: 5
 --- !u!65 &1665373351
 BoxCollider:
@@ -19125,6 +19137,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox1: {fileID: 1054076493}
+  dialogueBoxS2: {fileID: 0}
+  dialogueBoxS3: {fileID: 0}
+  dialogueBoxS4: {fileID: 0}
   proximity: 5
 --- !u!65 &1758244357
 BoxCollider:
@@ -23011,6 +23026,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox1: {fileID: 1823166287}
+  dialogueBoxS2: {fileID: 0}
+  dialogueBoxS3: {fileID: 0}
+  dialogueBoxS4: {fileID: 0}
   proximity: 5
 --- !u!65 &1984924609
 BoxCollider:
@@ -23446,6 +23464,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox1: {fileID: 517550954}
+  dialogueBoxS2: {fileID: 0}
+  dialogueBoxS3: {fileID: 0}
+  dialogueBoxS4: {fileID: 0}
   proximity: 5
 --- !u!65 &2051768721
 BoxCollider:
@@ -23538,6 +23559,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 517550954}
+  dialogueBoxP1: {fileID: 0}
+  dialogueBoxP2: {fileID: 0}
+  dialogueBoxP3: {fileID: 0}
+  dialogueBoxP4: {fileID: 0}
+  axe: {fileID: 0}
+  axeCost: 0
   proximity: 5
 --- !u!1 &2053978167
 GameObject:
