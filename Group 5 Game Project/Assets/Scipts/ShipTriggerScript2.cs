@@ -68,11 +68,11 @@ public class ShipTriggerScript2 : MonoBehaviour
     // and does all necessary things to "end" the level.
     private void hasRocks()
     {
-        if(playerResourcesScript.RedOreValue == roundManagerScript.requiredRedOre &&
-            playerResourcesScript.BlueOreValue == roundManagerScript.requiredBlueOre &&
-            playerResourcesScript.GreenOreValue == roundManagerScript.requiredGreenOre &&
-            playerResourcesScript.YellowOreValue == roundManagerScript.requiredYellowOre &&
-            playerResourcesScript.OrangeOreValue == roundManagerScript.requiredOrangeOre) 
+        if(playerResourcesScript.RedOreValue >= roundManagerScript.requiredRedOre &&
+            playerResourcesScript.BlueOreValue >= roundManagerScript.requiredBlueOre &&
+            playerResourcesScript.GreenOreValue >= roundManagerScript.requiredGreenOre &&
+            playerResourcesScript.YellowOreValue >= roundManagerScript.requiredYellowOre &&
+            playerResourcesScript.OrangeOreValue >= roundManagerScript.requiredOrangeOre) 
         {
             if (isShipDown)
             {
