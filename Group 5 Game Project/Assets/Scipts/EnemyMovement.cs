@@ -191,7 +191,7 @@ public class EnemyMovement : MonoBehaviour
             anim.SetBool("tookDamage", true);
             Invoke("EndDamage", 1.5f);
 
-            if (stats.health == 0)
+            if (stats.health <= 0)
             {
                 anim.SetBool("isDead", true);
                 Invoke("Die", 1.5f);
