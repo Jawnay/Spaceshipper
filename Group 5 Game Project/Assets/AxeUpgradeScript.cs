@@ -43,8 +43,13 @@ public class AxeUpgradeScript : MonoBehaviour
         if(inTrigger){
             if(Input.GetKeyDown(KeyCode.Z))
             {
-                Debug.Log("Z Pressed");
-                upgradePickAxe();
+                if (upgradeCoinCost > 11) {
+                    Debug.Log("no more upgrades");
+                } else {
+                    Debug.Log("Z Pressed");
+                    upgradePickAxe();
+
+                }
             }
         }
     }
@@ -58,6 +63,7 @@ public class AxeUpgradeScript : MonoBehaviour
             {
                 miningManagerScript.damage = miningManagerScript.damage + 20;
                 coinResourcesScript.value = coinResourcesScript.value - playerCoins;
+                upgradeCoinCost+=2;
 
             } else {
                 Debug.Log("You have reached the maximum upgrade level for this pickaxe");

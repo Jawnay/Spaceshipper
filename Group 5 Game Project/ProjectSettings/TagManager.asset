@@ -31,7 +31,12 @@ TagManager:
   - Continue
   - Ship
   - panel
-  - Coin
+  - dialogueP1
+  - dialogueP2
+  - dialogueP3
+  - Axe
+  - dialogueP4
+  - dialogueP
   layers:
   - Default
   - TransparentFX
