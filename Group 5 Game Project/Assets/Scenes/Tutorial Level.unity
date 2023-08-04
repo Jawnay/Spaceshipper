@@ -6519,11 +6519,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919175054208688551, guid: 6bf89143517df22488b900ef1f9c894d, type: 3}
       propertyPath: dialogs.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 919175054208688551, guid: 6bf89143517df22488b900ef1f9c894d, type: 3}
+      propertyPath: dialogs.Array.data[3]
+      value: 
+      objectReference: {fileID: 601236204}
+    - target: {fileID: 919175054208688551, guid: 6bf89143517df22488b900ef1f9c894d, type: 3}
+      propertyPath: dialogs.Array.data[4]
+      value: 
+      objectReference: {fileID: 601236203}
+    - target: {fileID: 919175054208688551, guid: 6bf89143517df22488b900ef1f9c894d, type: 3}
+      propertyPath: dialogs.Array.data[5]
+      value: 
+      objectReference: {fileID: 601236202}
     - target: {fileID: 919175054371824883, guid: 6bf89143517df22488b900ef1f9c894d, type: 3}
       propertyPath: m_text
       value: Your goal is to gather rocks for home world to inspect!
+      objectReference: {fileID: 0}
+    - target: {fileID: 919175054371824883, guid: 6bf89143517df22488b900ef1f9c894d, type: 3}
+      propertyPath: m_fontSize
+      value: 66
+      objectReference: {fileID: 0}
+    - target: {fileID: 919175054371824883, guid: 6bf89143517df22488b900ef1f9c894d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 919175054415395137, guid: 6bf89143517df22488b900ef1f9c894d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6761,17 +6781,52 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.677238
       objectReference: {fileID: 0}
+    - target: {fileID: 919175055069980472, guid: 6bf89143517df22488b900ef1f9c894d, type: 3}
+      propertyPath: m_text
+      value: In the main game, there will be 4 levels.
+      objectReference: {fileID: 0}
+    - target: {fileID: 919175055252446522, guid: 6bf89143517df22488b900ef1f9c894d, type: 3}
+      propertyPath: m_text
+      value: Each level will have different rock requirements.
+      objectReference: {fileID: 0}
     - target: {fileID: 919175055375548910, guid: 6bf89143517df22488b900ef1f9c894d, type: 3}
       propertyPath: m_text
       value: Hello and Welcome to SpaceShipper new Recruit! [Left Click]
+      objectReference: {fileID: 0}
+    - target: {fileID: 919175055930047063, guid: 6bf89143517df22488b900ef1f9c894d, type: 3}
+      propertyPath: m_text
+      value: Good luck out there!
       objectReference: {fileID: 0}
     - target: {fileID: 919175055990836503, guid: 6bf89143517df22488b900ef1f9c894d, type: 3}
       propertyPath: m_text
       value: Use WASD to move around and when you're ready to start, follow the path
         behind me.
       objectReference: {fileID: 0}
+    - target: {fileID: 919175055990836503, guid: 6bf89143517df22488b900ef1f9c894d, type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 919175055990836503, guid: 6bf89143517df22488b900ef1f9c894d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bf89143517df22488b900ef1f9c894d, type: 3}
+--- !u!1 &601236202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919175055930047061, guid: 6bf89143517df22488b900ef1f9c894d, type: 3}
+  m_PrefabInstance: {fileID: 601236201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &601236203 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919175055252446520, guid: 6bf89143517df22488b900ef1f9c894d, type: 3}
+  m_PrefabInstance: {fileID: 601236201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &601236204 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919175055069980486, guid: 6bf89143517df22488b900ef1f9c894d, type: 3}
+  m_PrefabInstance: {fileID: 601236201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &612926511
 PrefabInstance:
   m_ObjectHideFlags: 0
