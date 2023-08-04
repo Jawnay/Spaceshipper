@@ -52,8 +52,8 @@ public class GameController : MonoBehaviour
     {
         ship = GameObject.FindGameObjectWithTag("Ship");
        isNext = ship.GetComponent<ShipTriggerScript2>().nextLevel;
-       Debug.Log("here");
-        Debug.Log("What is isNext" + isNext);
+        //Debug.Log("here");
+        //Debug.Log("What is isNext" + isNext);
         if (isNext != completedLevel) {
             Debug.Log("here1");
             //currentLevel = 1;
