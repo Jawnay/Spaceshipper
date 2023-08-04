@@ -28,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
 
         for (int i = 0; i < howMany; i++)
         {
-            Debug.Log(nextSpawnPoint);
+            //Debug.Log(nextSpawnPoint);
             UnityEngine.AI.NavMeshHit spawn = GenerateSpawnFromPoint(spawnPoints[nextSpawnPoint]);
             GameObject newEnemy = Instantiate(blueEnemy, spawn.position, spawnPoints[nextSpawnPoint].rotation);
             nextSpawnPoint++;

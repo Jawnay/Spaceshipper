@@ -16,10 +16,12 @@ public class ShipTriggerScript2 : MonoBehaviour
     public int matCollected;
     public bool returnShip;
     public GameObject panel;
+    public CoinResources coinResources;
     // Start is called before the first frame update
     void Start()
     {
         panel = GameObject.FindGameObjectWithTag("panel");
+        //coinResources = coinResources.FindGameObjectWithTag("Coin");
         panel.SetActive(false);
         nextLevel = 0;
         isShipDown = false;
@@ -98,6 +100,7 @@ public class ShipTriggerScript2 : MonoBehaviour
     {
        // panel = GameObject.FindGameObjectWithTag("panel");
         //panel.SetActive(true);
+        coinResources.AddCoins(10);
         panel.SetActive(true);
         Invoke("panelSet", 5f);
         // Debug.Log("I have arrived");
