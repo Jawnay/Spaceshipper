@@ -103,7 +103,7 @@ public class RoundManager : MonoBehaviour
     private void UpdateRoundPromptText()
     {
         // Update the round prompt text with the remaining ores to collect
-        string promptText = "Collect one of each ore:\n"; // Add a new line after the main text
+        string promptText = "Next Shipment:\n"; // Add a new line after the main text
 
         // Display the required rocks for each ore type
         redOreRequiredText.text = $"Red Ore: {requiredRedOre}";
