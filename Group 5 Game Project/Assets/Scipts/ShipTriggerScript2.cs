@@ -10,7 +10,7 @@ public class ShipTriggerScript2 : MonoBehaviour
     public PlayerResources playerResourcesScript;
     public int rocksNeeded = 2;
     public bool isShipDown;
-    public bool nextLevel;
+    public int nextLevel;
     public int matCollected;
     public bool returnShip;
     public GameObject panel;
@@ -19,7 +19,7 @@ public class ShipTriggerScript2 : MonoBehaviour
     {
         // panel = GameObject.FindGameObjectWithTag("panel");
         // panel.SetActive(false);
-        nextLevel = false;
+        nextLevel = 0;
         isShipDown = false;
         matCollected = 0;
         ship.SetBool("lowerShip", false);
@@ -84,10 +84,19 @@ public class ShipTriggerScript2 : MonoBehaviour
 
     private void activateScreen()
     {
-        // panel.SetActive(true);
+        //panel.SetActive(true);
         // Debug.Log("I have arrived");
-        nextLevel = true;
+        nextLevel++;
+        reset();
         // panel = GameObject.FindGameObjectWithTag("panel");
+    }
+
+    void reset() {
+        //nextLevel = false;
+        isShipDown = false;
+        matCollected = 0;
+        ship.SetBool("lowerShip", false);
+        ship.SetBool("returnShip", false);
     }
 }
 

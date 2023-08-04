@@ -9,17 +9,18 @@ public class GameController : MonoBehaviour
     public RockSpawner[] rockSpawners;
     public int[] numRocksToSpawn;       // Determines how many rocks are spawned at any given location.
     public int numRocksIndex;           // For iterating through numRocksToSpawn
-    public bool isNext;
+    public int isNext;
     public GameObject ship;
     public GameObject Player;
     public RoundManager roundManager;
     public TimerCountdown timerCountdown;
     public int currentLevel;
+    public int completedLevel;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentLevel = 0;
+        completedLevel = 0;
         Player = GameObject.FindGameObjectWithTag("Player");
         ship = GameObject.FindGameObjectWithTag("Ship");
         isNext = ship.GetComponent<ShipTriggerScript2>().nextLevel;
@@ -53,19 +54,20 @@ public class GameController : MonoBehaviour
        isNext = ship.GetComponent<ShipTriggerScript2>().nextLevel;
        Debug.Log("here");
         Debug.Log("What is isNext" + isNext);
-        if (isNext) {
-            isNext = false;
+        if (isNext != completedLevel) {
             Debug.Log("here1");
-            currentLevel++;
-            Debug.Log("What is Level" + currentLevel);
-            // if (currentLevel == 1) {
-            //     Debug.Log("This thing happens");
-            //   //  LoadLevel2();
-            // } else if (currentLevel == 2) {
-            //     LoadLevel3();
-            // } else if (currentLevel == 3) {
-            //     LoadLevel4();
-            // }
+            //currentLevel = 1;
+            completedLevel++;
+            if (isNext == 1 && completedLevel == 1) {
+                //completedLevel = 1;
+                Debug.Log("This thing happens");
+                LoadLevel2();
+
+            } else if (isNext == 2 && completedLevel == 2) {
+                LoadLevel3();
+            } else if (isNext == 3 && completedLevel == 3) {
+                LoadLevel4();
+            }
         }
         
     }
@@ -89,7 +91,7 @@ public class GameController : MonoBehaviour
     {
         // 1r, 1o, 1y, 1b, 1g | 2be, 1re
         //isNext = false;
-        //ResetLevel();
+        ResetLevel();
         // Prompt
         roundManager.SetRequiredOres(1, 1, 1, 1, 1);
 
@@ -99,14 +101,11 @@ public class GameController : MonoBehaviour
         enemySpawner.SpawnRedEnemies(1);
 
         // Wipe rocks and spawn new rocks
-        if (isNext) {
-            LoadLevel3();
-        }
     }
 
     void LoadLevel3()
     {
-        isNext = false;
+        //isNext = false;
         // 1r, 2o, 1y, 1b, 2g | 2be, 2re
         ResetLevel();
         
@@ -120,15 +119,11 @@ public class GameController : MonoBehaviour
         enemySpawner.SpawnRedEnemies(2);
 
         // Wipe rocks and spawn new rocks
-        if (isNext) {
-            LoadLevel4();
-        }
         
     }
 
     void LoadLevel4()
     {
-        isNext = false;
         ResetLevel();
         // 2r, 2o, 1y, 2b, 1g | 2be, 2re
 
@@ -143,7 +138,7 @@ public class GameController : MonoBehaviour
         enemySpawner.SpawnRedEnemies(2);
 
         // Wipe rocks and spawn new rocks
-        if (isNext) {
+        if (isNext == 4) {
             // Load a you win canvas
             SceneManager.LoadScene(6);
         }
@@ -161,9 +156,9 @@ public class GameController : MonoBehaviour
         numRocksIndex = 0;
         foreach (RockSpawner rs in rockSpawners)
         {
-            rs.WipeRocks();
-            rs.SpawnRocks(numRocksToSpawn[numRocksIndex]);
-            numRocksIndex++;
+            //rs.WipeRocks();
+            //rs.SpawnRocks(numRocksToSpawn[numRocksIndex]);
+           // numRocksIndex++;
         }
 
         ResetPlayerHealth();   
