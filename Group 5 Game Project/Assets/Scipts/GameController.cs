@@ -25,21 +25,21 @@ public class GameController : MonoBehaviour
         ship = GameObject.FindGameObjectWithTag("Ship");
         isNext = ship.GetComponent<ShipTriggerScript2>().nextLevel;
         // Initialize rock spawners
-        numRocksToSpawn = new int[] {2, 2, 2, 2, 2, 2, 2, 3, 3, 2, 2, 5, 2, 3};
-        rockSpawners[0].Init(195f, 213f, 69f, 70f, 63f, 100f);
-        rockSpawners[1].Init(360f, 405f, 53f, 54f, 233f, 244f);
-        rockSpawners[2].Init(65f, 75f, 27f, 27.5f, 393f, 400f);
-        rockSpawners[3].Init(400f, 415f, 60f, 60.8f, 75f, 95f);
-        rockSpawners[4].Init(310f, 317f, 51f, 51.38f, 300f, 314f);
-        rockSpawners[5].Init(69f, 77f, 51.5f, 52f, 60f, 70f);
-        rockSpawners[6].Init(171f, 180f, 64.5f, 65f, 81f, 92f);
-        rockSpawners[7].Init(400f, 410f, 60f, 61f, 70f, 93f);
-        rockSpawners[8].Init(350f, 375f, 19.7f, 20f, 372f, 390f);
-        rockSpawners[9].Init(230f, 235f, 52f, 52f, 425f, 430f);
-        rockSpawners[10].Init(174f, 182f, 51f, 51.25f,383f, 390f);
+        numRocksToSpawn = new int[] {2, 2, 2, 2, 4, 2, 2, 3, 4, 2, 2, 5, 2, 5};
+        rockSpawners[0].Init(190f, 218f, 69f, 70f, 63f, 100f);
+        rockSpawners[1].Init(355f, 410f, 53f, 54f, 233f, 244f);
+        rockSpawners[2].Init(60f, 80f, 27f, 27.5f, 393f, 400f);
+        rockSpawners[3].Init(395f, 420f, 60f, 60.8f, 75f, 95f);
+        rockSpawners[4].Init(305f, 322f, 51f, 51.38f, 298f, 316f);
+        rockSpawners[5].Init(64f, 82f, 51.5f, 52f, 60f, 70f);
+        rockSpawners[6].Init(166f, 185f, 64.5f, 65f, 81f, 92f);
+        rockSpawners[7].Init(395f, 415f, 60f, 61f, 70f, 93f);
+        rockSpawners[8].Init(345f, 380f, 19.7f, 20f, 370f, 392f);
+        rockSpawners[9].Init(225f, 240f, 52f, 52f, 425f, 430f);
+        rockSpawners[10].Init(169f, 187f, 51f, 51.25f,383f, 390f);
         rockSpawners[11].Init(70f, 71f, 25f, 25.5f, 395f, 425f);
-        rockSpawners[12].Init(135f, 150f, 64.7f, 65.2f, 111f, 125f);
-        rockSpawners[13].Init(100f, 144f, 76.8f,77.8f, 180f, 205f);
+        rockSpawners[12].Init(130f, 155f, 64.7f, 65.2f, 111f, 125f);
+        rockSpawners[13].Init(95f, 149f, 76.8f,77.8f, 177f, 208f);
         
 
 
@@ -82,9 +82,9 @@ public class GameController : MonoBehaviour
         ResetLevel();
 
         // Prompt
-        roundManager.SetRequiredOres(1, 0, 0, 1, 1);
+        roundManager.SetRequiredOres(1, 1, 1, 0, 0);
 
-        timerCountdown.secondsLeft = 100;
+        timerCountdown.secondsLeft = 120;
         // Spawn enemies
         enemySpawner.SpawnBlueEnemies(2);
         enemySpawner.SpawnRedEnemies(1);

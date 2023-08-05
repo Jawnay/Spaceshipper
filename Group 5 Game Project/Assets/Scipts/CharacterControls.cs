@@ -6,7 +6,7 @@ using System.Collections;
 
 public class CharacterControls : MonoBehaviour
 {
-    public float speed = 10.0f;
+    public float speed = 50.0f;
     public float airVelocity = 8f;
     public float gravity = 10.0f;
     public float maxVelocityChange = 10.0f;

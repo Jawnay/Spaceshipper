@@ -12003,8 +12003,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1946906698}
     - target: {fileID: 1568171964, guid: 077186bb3a3df2e469d73da3f7ba758f, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568171964, guid: 077186bb3a3df2e469d73da3f7ba758f, type: 3}
       propertyPath: airVelocity
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568171964, guid: 077186bb3a3df2e469d73da3f7ba758f, type: 3}
+      propertyPath: maxSpeedBoostCount
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7043526398713710075, guid: 077186bb3a3df2e469d73da3f7ba758f, type: 3}
       propertyPath: m_Name
